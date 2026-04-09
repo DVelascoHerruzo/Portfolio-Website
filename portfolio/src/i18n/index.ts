@@ -36,6 +36,7 @@ export interface Translations {
     source: string;
     demo: string;
     demos: { topic: string; detail: string }[];
+    reshadeCards: { title: string; description: string }[];
   };
   llm: {
     heading: string;
@@ -120,6 +121,11 @@ const en: Translations = {
     reshadeSubtitle:  'post-processing presets & studies',
     source:           'SOURCE',
     demo:             'DEMO',
+    reshadeCards: [
+      { title: 'ASCII Art Effect',  description: 'Converts the screen to ASCII art using Difference-of-Gaussians edge detection and a character-map texture lookup. Features depth-based edge weighting, adjustable zoom, offset, and blur kernel for expressive control.' },
+      { title: 'Palette Swap',     description: 'Replaces all screen colors with the closest match from a user-defined palette of up to 8 custom colors — ideal for retro aesthetics, forced color grading, and stylised visual effects.' },
+      { title: 'Pixel Sorting',    description: 'Sorts pixels within luminance-masked spans by hue, saturation, or luminance — producing the classic glitch-art pixel-sorting effect. Fully controllable with threshold masking, span length limits, and animated offsets.' },
+    ],
     demos: [
       { topic: 'Terrain Generation', detail: 'Multi-octave FBM noise, heightmap-to-mesh' },
       { topic: 'Ray Marching',       detail: 'SDF primitives, soft shadows, AO' },
@@ -233,6 +239,11 @@ const es: Translations = {
     reshadeSubtitle:  'presets de post-procesado y estudios',
     source:           'CÓDIGO',
     demo:             'DEMO',
+    reshadeCards: [
+      { title: 'Efecto Arte ASCII',  description: 'Convierte la pantalla en arte ASCII mediante detección de bordes Difference-of-Gaussians y un mapa de caracteres. Incluye ponderación de bordes por profundidad, zoom ajustable, desplazamiento y núcleo de difuminado para un control expresivo.' },
+      { title: 'Intercambio de Paleta', description: 'Reemplaza todos los colores de la pantalla por la coincidencia más cercana de una paleta personalizada de hasta 8 colores — ideal para estéticas retro, gradación de color forzada y efectos visuales estilizados.' },
+      { title: 'Ordenación de Píxeles', description: 'Ordena píxeles dentro de tramos enmascarados por luminancia, ordenando por tono, saturación o luminosidad — generando el efecto de arte glitch clásico de ordenación de píxeles. Totalmente configurable con umbrales, límites de tramo y desplazamientos animados.' },
+    ],
     demos: [
       { topic: 'Generación de Terreno', detail: 'FBM multi-octava, heightmap a malla' },
       { topic: 'Ray Marching',          detail: 'Primitivas SDF, sombras suaves, AO' },
@@ -346,6 +357,11 @@ const pl: Translations = {
     reshadeSubtitle:  'presety post-processingu i studia',
     source:           'KOD',
     demo:             'DEMO',
+    reshadeCards: [
+      { title: 'Efekt Sztuki ASCII',    description: 'Przekształca ekran w sztukę ASCII za pomocą detekcji krawędzi Difference-of-Gaussians i tablicy tekstur znaków. Oferuje ważenie krawędzi głębokością, regulowany zoom, przesunięcie i jądro rozmycia dla ekspresyjnej kontroli.' },
+      { title: 'Zamiana Palety',        description: 'Zastępuje wszystkie kolory ekranu najbliższym odpowiednikiem z palety do 8 kolorów zdefiniowanych przez użytkownika — idealne do estetyki retro, wymuszonej korekcji kolorów i stylizowanych efektów wizualnych.' },
+      { title: 'Sortowanie Pikseli',    description: 'Sortuje piksele wewnątrz rozpiętości maskowanych luminancją według barwy, nasycenia lub jasności — tworząc klasyczny efekt glitch-art. Pełna kontrola przez progi maskowania, limity rozpiętości i animowane przesunięcia.' },
+    ],
     demos: [
       { topic: 'Generowanie Terenu',   detail: 'FBM wielooktawowy, mapa wysokości do siatki' },
       { topic: 'Ray Marching',         detail: 'Prymitywy SDF, miękkie cienie, AO' },

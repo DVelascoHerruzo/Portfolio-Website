@@ -20,7 +20,7 @@ function TagBadge({ tag }: { tag: string }) {
   );
 }
 
-function ReShadeCard({ project }: { project: typeof reshadeProjects[number] }) {
+function ReShadeCard({ project, description }: { project: typeof reshadeProjects[number]; description?: string }) {
   const { t } = useLanguage();
   return (
     <motion.div
@@ -49,7 +49,7 @@ function ReShadeCard({ project }: { project: typeof reshadeProjects[number] }) {
         >
           {project.title}
         </h4>
-        <p className="text-cp-muted text-xs leading-relaxed flex-1">{project.description}</p>
+        <p className="text-cp-muted text-xs leading-relaxed flex-1">{description ?? project.description}</p>
 
         <div className="flex flex-wrap gap-1.5 mt-auto">
           {project.tags.map(t => <TagBadge key={t} tag={t} />)}
@@ -216,8 +216,8 @@ export default function ShaderWork() {
           viewport={{ once: true, margin: '-40px' }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {reshadeProjects.map(p => (
-            <ReShadeCard key={p.id} project={p} />
+          {reshadeProjects.map((p, i) => (
+            <ReShadeCard key={p.id} project={p} description={t.shaderWork.reshadeCards[i]?.description} />
           ))}
         </motion.div>
       </div>
