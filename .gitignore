@@ -1,3 +1,10 @@
+# Large media files (host externally or keep local only)
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+
 # Dependencies
 node_modules/
 

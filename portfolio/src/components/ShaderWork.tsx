@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Code2, Play } from 'lucide-react';
+import { ExternalLink, Code2 } from 'lucide-react';
 import { featuredProject, reshadeProjects } from '../data/projects';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -116,6 +116,20 @@ export default function ShaderWork() {
           {/* Corner accent */}
           <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-cp-yellow/40 pointer-events-none" />
 
+          {/* Video preview */}
+          {featuredProject.videoUrl && (
+            <div className="mb-8 rounded overflow-hidden border border-cp-yellow/20">
+              <video
+                src={featuredProject.videoUrl}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-h-72 object-cover"
+              />
+            </div>
+          )}
+
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Left: info */}
             <div className="flex-1">
@@ -148,7 +162,7 @@ export default function ShaderWork() {
                   className="inline-flex items-center gap-2 px-6 py-2.5 bg-cp-yellow text-cp-black font-bold text-sm tracking-widest clip-corner hover:brightness-110 transition-all"
                   style={{ fontFamily: "'Orbitron', sans-serif" }}
                 >
-                  <Play size={14} /> {t.shaderWork.launchPlayground}
+                  <ExternalLink size={14} /> {t.shaderWork.demo}
                 </a>
               )}
               {featuredProject.githubUrl ? (
