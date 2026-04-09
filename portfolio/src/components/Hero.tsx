@@ -26,6 +26,16 @@ export default function Hero() {
       {/* Night City ambient gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-cp-black via-cp-black to-[#04080c] pointer-events-none" />
 
+      {/* Background image */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img
+          src="images/Background.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover opacity-[0.18]"
+        />
+      </div>
+
       {/* Neon perspective grid — parallaxes faster */}
       <motion.div
         style={{ y: gridY }}
@@ -107,7 +117,7 @@ export default function Hero() {
             {t.hero.viewShaders}
           </button>
           <a
-            href="/CV_David_Velasco_Herruzo.pdf"
+            href={`${import.meta.env.BASE_URL}CV_David_Velasco_Herruzo.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 border border-cp-cyan text-cp-cyan font-bold tracking-widest text-sm clip-corner hover:bg-cp-cyan hover:text-cp-black transition-all duration-200"
