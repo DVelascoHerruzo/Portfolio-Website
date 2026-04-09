@@ -40,7 +40,11 @@ export interface Translations {
   llm: {
     heading: string;
     subtitle: string;
-    items: { title: string; body: string }[];
+    mlLabel: string;
+    frontendLabel: string;
+    featuresTitle: string;
+    source: string;
+    demo: string;
   };
   lore: {
     heading: string;
@@ -117,26 +121,13 @@ const en: Translations = {
     ],
   },
   llm: {
-    heading:  '// BEYOND_RENDERING',
-    subtitle: 'CS & AI degree — academic foundation & cross-discipline thinking',
-    items: [
-      {
-        title: 'CS & AI Degree — IE University',
-        body: "3rd year Bachelor's in Computer Science & Artificial Intelligence at IE University. Coursework spans algorithms & data structures, machine learning theory, linear algebra, statistics, operating systems, and software engineering — building a solid foundation across the full CS stack.",
-      },
-      {
-        title: 'Machine Learning Foundations',
-        body: "University coursework covering supervised and unsupervised learning: regression, classification, clustering, neural networks, and model evaluation. Hands-on with Python's ML stack — NumPy, pandas, Matplotlib, and scikit-learn — for data analysis and modelling assignments.",
-      },
-      {
-        title: 'Software Engineering Breadth',
-        body: 'Beyond ML, the degree covers systems programming, algorithms, databases, and software architecture. Comfortable with Python, C++, and JavaScript — and with picking up new tools and frameworks quickly in a professional environment.',
-      },
-      {
-        title: "Why It's Relevant to CDPR",
-        body: "CD Projekt RED is actively hiring for LLM & AI specialist roles — a signal the studio is investing heavily in AI-powered tooling, NPC systems, and internal automation. My CS + AI background makes me a natural fit to grow into that space at CDPR, even while joining through the graphics track.",
-      },
-    ],
+    heading:       '// BEYOND_SHADERS',
+    subtitle:      'ML & Web Development — real projects, shipped',
+    mlLabel:       'FEATURED // ML',
+    frontendLabel: 'FEATURED // FRONTEND',
+    featuresTitle: 'KEY FEATURES',
+    source:        'SOURCE',
+    demo:          'LIVE DEMO',
   },
   lore: {
     heading:  '// JACK_IN — WHY.CDPR',
@@ -225,26 +216,13 @@ const es: Translations = {
     ],
   },
   llm: {
-    heading:  '// MÁS_ALLÁ_DEL_RENDER',
-    subtitle: 'Grado en CS & IA — base académica y pensamiento interdisciplinar',
-    items: [
-      {
-        title: 'Grado en CS & IA — IE University',
-        body: '3er año del Grado en Informática e Inteligencia Artificial en IE University. El plan de estudios abarca algoritmos y estructuras de datos, teoría del aprendizaje automático, álgebra lineal, estadística, sistemas operativos e ingeniería del software.',
-      },
-      {
-        title: 'Fundamentos de Machine Learning',
-        body: 'Asignaturas universitarias de aprendizaje supervisado y no supervisado: regresión, clasificación, clustering, redes neuronales y evaluación de modelos. Práctica con NumPy, pandas, Matplotlib y scikit-learn.',
-      },
-      {
-        title: 'Amplitud en Ingeniería del Software',
-        body: 'Más allá del ML, el grado cubre programación de sistemas, algoritmos, bases de datos y arquitectura de software. Cómodo con Python, C++ y JavaScript, y con aprender rápidamente nuevas herramientas en entornos profesionales.',
-      },
-      {
-        title: 'Por qué es Relevante para CDPR',
-        body: 'CD Projekt RED está contratando activamente perfiles especializados en LLM e IA — una señal de que el estudio está invirtiendo fuertemente en herramientas basadas en IA, sistemas de NPCs y automatización interna. Mi formación en CS + IA me posiciona para crecer en esa área en CDPR.',
-      },
-    ],
+    heading:       '// MÁS_ALLÁ_DE_LOS_SHADERS',
+    subtitle:      'ML & Desarrollo Web — proyectos reales, entregados',
+    mlLabel:       'DESTACADO // ML',
+    frontendLabel: 'DESTACADO // FRONTEND',
+    featuresTitle: 'CARACTERÍSTICAS CLAVE',
+    source:        'CÓDIGO',
+    demo:          'DEMO EN VIVO',
   },
   lore: {
     heading:  '// CONECTAR — POR_QUÉ.CDPR',
@@ -333,26 +311,13 @@ const pl: Translations = {
     ],
   },
   llm: {
-    heading:  '// POZA_RENDEROWANIEM',
-    subtitle: 'Studia z CS & AI — podstawy akademickie i myślenie wielodyscyplinarne',
-    items: [
-      {
-        title: 'Studia CS & AI — IE University',
-        body: '3. rok licencjatu z Informatyki i Sztucznej Inteligencji na IE University. Program obejmuje algorytmy i struktury danych, teorię uczenia maszynowego, algebrę liniową, statystykę, systemy operacyjne i inżynierię oprogramowania.',
-      },
-      {
-        title: 'Podstawy Machine Learning',
-        body: 'Zajęcia uczelni obejmujące uczenie nadzorowane i nienadzorowane: regresja, klasyfikacja, klasteryzacja, sieci neuronowe i ewaluacja modeli. Praktyka z NumPy, pandas, Matplotlib i scikit-learn.',
-      },
-      {
-        title: 'Szeroki Zakres Inżynierii Oprogramowania',
-        body: 'Poza ML, studia obejmują programowanie systemów, algorytmy, bazy danych i architekturę oprogramowania. Swoboda z Pythonem, C++ i JavaScriptem — oraz szybkie uczenie się nowych narzędzi.',
-      },
-      {
-        title: 'Dlaczego to Jest Istotne dla CDPR',
-        body: 'CD Projekt RED aktywnie zatrudnia specjalistów od LLM i AI — sygnał, że studio intensywnie inwestuje w narzędzia oparte na AI, systemy NPC i automatyzację wewnętrzną. Moje wykształcenie z CS + AI sprawia, że naturalnie pasuję do tej przestrzeni w CDPR.',
-      },
-    ],
+    heading:       '// POZA_SHADERAMI',
+    subtitle:      'ML & Tworzenie Stron — prawdziwe projekty, dostarczone',
+    mlLabel:       'WYRÓŻNIONY // ML',
+    frontendLabel: 'WYRÓŻNIONY // FRONTEND',
+    featuresTitle: 'KLUCZOWE FUNKCJE',
+    source:        'KOD',
+    demo:          'DEMO NA ŻYWO',
   },
   lore: {
     heading:  '// POŁĄCZ_SIĘ — DLACZEGO.CDPR',

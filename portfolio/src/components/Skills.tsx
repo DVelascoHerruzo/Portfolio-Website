@@ -24,6 +24,7 @@ const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-
     skills: [
       'GLSL',
       'HLSL',
+      'CUDA',
       'Shadertoy',
       'ReShade (HLSL)',
       'Compute Shaders',
@@ -71,6 +72,8 @@ const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-
     skills: [
       'Machine Learning',
       'Neural Networks',
+      'NLP',
+      'PyTorch',
       'NumPy / pandas',
       'scikit-learn',
       'Data Analysis',

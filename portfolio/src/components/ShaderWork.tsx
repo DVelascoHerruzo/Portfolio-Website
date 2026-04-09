@@ -139,6 +139,7 @@ export default function ShaderWork() {
                 ))}
               </div>
 
+              <div className="flex flex-wrap items-center gap-3">
               {featuredProject.demoUrl && (
                 <a
                   href={featuredProject.demoUrl}
@@ -150,6 +151,21 @@ export default function ShaderWork() {
                   <Play size={14} /> {t.shaderWork.launchPlayground}
                 </a>
               )}
+              {featuredProject.githubUrl ? (
+                <a
+                  href={featuredProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 border border-cp-yellow/40 text-cp-yellow/80 text-sm tracking-widest clip-corner hover:border-cp-yellow hover:text-cp-yellow transition-all font-mono"
+                >
+                  <Code2 size={14} /> {t.shaderWork.source}
+                </a>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 text-xs text-cp-border font-mono mt-1">
+                  <Code2 size={13} /> [ ADD GITHUB URL — set githubUrl in projects.ts ]
+                </span>
+              )}
+              </div>
             </div>
 
             {/* Right: feature list */}

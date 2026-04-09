@@ -1,4 +1,4 @@
-export type ProjectCategory = 'shader' | 'reshade' | 'llm';
+export type ProjectCategory = 'shader' | 'reshade' | 'llm' | 'ml' | 'frontend';
 
 export interface Project {
   id: string;
@@ -11,6 +11,7 @@ export interface Project {
   githubUrl?: string;
   category: ProjectCategory;
   featured?: boolean;
+  featuredFeatures?: { topic: string; detail: string }[];
 }
 
 export const projects: Project[] = [
@@ -59,9 +60,52 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/', // TODO: replace with repo URL
     category: 'reshade',
   },
+
+  // ── ML / AI Projects ──────────────────────────────────────────────
+  {
+    id: 'chatbot-nlp',
+    title: 'AI Chatbot — NLP & ML Pipeline',
+    description:
+      'Conversational chatbot built as coursework at IE University — custom NLP pipeline, intent classification neural network, and a seq2seq dialogue model. GPU-accelerated training via CUDA.',
+    longDescription:
+      'Built from scratch in Python: tokenization, stemming, and TF-IDF vectorisation feed a small classification network for intent detection. Extended with a seq2seq response model trained on curated datasets. CUDA kernels used to accelerate training iterations significantly over CPU-only runs.',
+    tags: ['Python', 'NLP', 'CUDA', 'Neural Networks', 'PyTorch', 'scikit-learn', 'seq2seq'],
+    imageUrl: '', // TODO: add screenshot
+    githubUrl: 'https://github.com/L96Expanded', // TODO: replace with specific repo URL
+    category: 'ml',
+    featuredFeatures: [
+      { topic: 'NLP Pipeline',     detail: 'Tokenization, stemming, TF-IDF vectorisation, intent classification' },
+      { topic: 'Neural Network',   detail: 'Custom seq2seq dialogue model trained from scratch' },
+      { topic: 'CUDA Acceleration',detail: 'GPU-accelerated training — significant speedup over CPU baseline' },
+      { topic: 'Data Engineering', detail: 'Custom dataset curation, preprocessing & evaluation loop' },
+    ],
+  },
+
+  // ── Frontend Projects ──────────────────────────────────────────────
+  {
+    id: 'dnd-platform',
+    title: 'Theater of the Mind — D&D Platform',
+    description:
+      'Full-stack web platform for online Theater of the Mind D&D sessions — real-time player dashboards, DM tooling, session management, and custom campaign data. Built and shipped end-to-end.',
+    longDescription:
+      'React + TypeScript frontend with a REST API backend. Real-time session tools powered by WebSockets, player character dashboards, DM encounter management, and a homebrew content creator. Custom component library, responsive layout, deployed as a live product.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'REST API', 'WebSockets', 'Vite', 'Full-Stack'],
+    imageUrl: '', // TODO: add screenshot
+    githubUrl: 'https://github.com/L96Expanded', // TODO: replace with specific repo URL
+    demoUrl: '',  // TODO: add live site URL
+    category: 'frontend',
+    featuredFeatures: [
+      { topic: 'Full-Stack Build', detail: 'React + TypeScript frontend, REST API backend, deployed live' },
+      { topic: 'Real-Time Tools',  detail: 'WebSocket-powered sessions, live player dashboards' },
+      { topic: 'DM Tooling',       detail: 'Encounter management, homebrew creator, faction tracker' },
+      { topic: 'Design System',    detail: 'Custom component library, responsive, dark theme' },
+    ],
+  },
 ];
 
-export const reshadeProjects = projects.filter(p => p.category === 'reshade');
-export const shaderProjects  = projects.filter(p => p.category === 'shader');
-export const llmProjects     = projects.filter(p => p.category === 'llm');
-export const featuredProject = projects.find(p => p.featured);
+export const reshadeProjects  = projects.filter(p => p.category === 'reshade');
+export const shaderProjects   = projects.filter(p => p.category === 'shader');
+export const llmProjects      = projects.filter(p => p.category === 'llm');
+export const mlProject        = projects.find(p => p.category === 'ml');
+export const frontendProject  = projects.find(p => p.category === 'frontend');
+export const featuredProject  = projects.find(p => p.featured);
