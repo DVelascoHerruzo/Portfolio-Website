@@ -65,42 +65,24 @@ export const projects: Project[] = [
   // ── ML / AI Projects ──────────────────────────────────────────────
   {
     id: 'chatbot-nlp',
-    title: 'AI Chatbot — NLP & ML Pipeline',
-    description:
-      'Conversational chatbot built as coursework at IE University — custom NLP pipeline, intent classification neural network, and a seq2seq dialogue model. GPU-accelerated training via CUDA.',
-    longDescription:
-      'Built from scratch in Python: tokenization, stemming, and TF-IDF vectorisation feed a small classification network for intent detection. Extended with a seq2seq response model trained on curated datasets. CUDA kernels used to accelerate training iterations significantly over CPU-only runs.',
-    tags: ['Python', 'NLP', 'CUDA', 'Neural Networks', 'PyTorch', 'scikit-learn', 'seq2seq'],
+    title: 'GitQuery — GitHub Recommender System',
+    description: 'Modular AI system recommending GitHub repositories via hybrid retrieval and Sentence-Transformer embeddings, with a full MLOps pipeline.',
+    tags: ['Python', 'Sentence-Transformers', 'Qdrant', 'MCP', 'FastAPI', 'Docker', 'MLOps', 'NLP'],
     imageUrl: 'images/Git_Query.png',
-    githubUrl: 'https://github.com/L96Expanded', // TODO: replace with specific repo URL
+    githubUrl: 'https://github.com/Seraphim-Systems/git-query',
     category: 'ml',
-    featuredFeatures: [
-      { topic: 'NLP Pipeline',     detail: 'Tokenization, stemming, TF-IDF vectorisation, intent classification' },
-      { topic: 'Neural Network',   detail: 'Custom seq2seq dialogue model trained from scratch' },
-      { topic: 'CUDA Acceleration',detail: 'GPU-accelerated training — significant speedup over CPU baseline' },
-      { topic: 'Data Engineering', detail: 'Custom dataset curation, preprocessing & evaluation loop' },
-    ],
   },
 
   // ── Frontend Projects ──────────────────────────────────────────────
   {
     id: 'dnd-platform',
-    title: 'Theater of the Mind — D&D Platform',
-    description:
-      'Full-stack web platform for online Theater of the Mind D&D sessions — real-time player dashboards, DM tooling, session management, and custom campaign data. Built and shipped end-to-end.',
-    longDescription:
-      'React + TypeScript frontend with a REST API backend. Real-time session tools powered by WebSockets, player character dashboards, DM encounter management, and a homebrew content creator. Custom component library, responsive layout, deployed as a live product.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'REST API', 'WebSockets', 'Vite', 'Full-Stack'],
+    title: 'Karsus Initiative — D&D Combat Tracker',
+    description: 'Full-stack D&D initiative tracker on Azure Static Web Apps with Azure Functions API, Cosmos DB, and Bicep IaC.',
+    tags: ['React 18', 'TypeScript', 'Azure SWA', 'Azure Functions', 'Cosmos DB', 'Bicep', 'JWT'],
     imageUrl: 'images/D&D_WEBAPP.png',
-    githubUrl: 'https://github.com/L96Expanded', // TODO: replace with specific repo URL
-    demoUrl: '',  // TODO: add live site URL
+    githubUrl: 'https://github.com/DVelascoHerruzo/KarsusInitiative',
+    demoUrl: 'https://karsusinitiative.com',
     category: 'frontend',
-    featuredFeatures: [
-      { topic: 'Full-Stack Build', detail: 'React + TypeScript frontend, REST API backend, deployed live' },
-      { topic: 'Real-Time Tools',  detail: 'WebSocket-powered sessions, live player dashboards' },
-      { topic: 'DM Tooling',       detail: 'Encounter management, homebrew creator, faction tracker' },
-      { topic: 'Design System',    detail: 'Custom component library, responsive, dark theme' },
-    ],
   },
 ];
 

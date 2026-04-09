@@ -41,7 +41,15 @@ export interface Translations {
     heading: string;
     subtitle: string;
     mlLabel: string;
+    mlTitle: string;
+    mlDescription: string;
+    mlLongDescription: string;
+    mlFeatures: { topic: string; detail: string }[];
     frontendLabel: string;
+    frontendTitle: string;
+    frontendDescription: string;
+    frontendLongDescription: string;
+    frontendFeatures: { topic: string; detail: string }[];
     featuresTitle: string;
     source: string;
     demo: string;
@@ -121,10 +129,28 @@ const en: Translations = {
     ],
   },
   llm: {
-    heading:       '// BEYOND_SHADERS',
-    subtitle:      'ML & Web Development — real projects, shipped',
-    mlLabel:       'FEATURED // ML',
-    frontendLabel: 'FEATURED // FRONTEND',
+    heading:              '// BEYOND_SHADERS',
+    subtitle:             'ML & Web Development — real projects, shipped',
+    mlLabel:              'FEATURED // ML',
+    mlTitle:              'GitQuery — GitHub Recommender System',
+    mlDescription:        'Modular AI system that recommends GitHub repositories using hybrid retrieval and semantic embeddings — team coursework at IE University / Seraphim Systems with a production-grade MLOps pipeline.',
+    mlLongDescription:    'Python backend with Sentence-Transformer embeddings stored in Qdrant vector DB. A custom MCP (Model Context Protocol) server exposes recommender tools to LLM agents via FastAPI. Training is containerised with Docker Compose, fully resumable through chunked checkpointing, and includes a CI/CD monitoring & retraining loop.',
+    mlFeatures: [
+      { topic: 'Semantic Retrieval',  detail: 'Sentence-Transformer embeddings + Qdrant vector search for accurate repo matching' },
+      { topic: 'MCP Server',          detail: 'Model Context Protocol server exposing tools to LLM agents via FastAPI (port 8090)' },
+      { topic: 'MLOps Pipeline',      detail: 'Containerised training, resumable chunked checkpointing, evaluation loop & CI/CD' },
+      { topic: 'Full Microservices',  detail: 'Recommender API, MCP server, CLI client — all orchestrated with Docker Compose' },
+    ],
+    frontendLabel:        'FEATURED // FRONTEND',
+    frontendTitle:        'Karsus Initiative — D&D Combat Tracker',
+    frontendDescription:  'Full-stack D&D initiative tracker deployed live on Azure Static Web Apps — React 18 + TypeScript frontend backed by Azure Functions, Cosmos DB, and Blob Storage.',
+    frontendLongDescription: 'Azure SWA + Functions v4 API (Node.js / TypeScript), JWT RS256 auth, Azure Cosmos DB for encounter and creature data, Azure Blob Storage for images. Infrastructure provisioned end-to-end via Bicep IaC and Azure Developer CLI (azd).',
+    frontendFeatures: [
+      { topic: 'Azure SWA + Functions',    detail: 'Deployed on Azure Static Web Apps with integrated Azure Functions v4 Node.js API' },
+      { topic: 'Cosmos DB + Blob Storage', detail: 'NoSQL encounter & creature data in Cosmos DB; images served from Azure Blob Storage' },
+      { topic: 'JWT Auth & Security',      detail: 'RS256 token auth, Content Security Policy, Google OAuth, security-hardened headers' },
+      { topic: 'Bicep IaC',               detail: 'All Azure infrastructure provisioned via Bicep templates + Azure Developer CLI (azd)' },
+    ],
     featuresTitle: 'KEY FEATURES',
     source:        'SOURCE',
     demo:          'LIVE DEMO',
@@ -216,10 +242,28 @@ const es: Translations = {
     ],
   },
   llm: {
-    heading:       '// MÁS_ALLÁ_DE_LOS_SHADERS',
-    subtitle:      'ML & Desarrollo Web — proyectos reales, entregados',
-    mlLabel:       'DESTACADO // ML',
-    frontendLabel: 'DESTACADO // FRONTEND',
+    heading:              '// MÁS_ALLÁ_DE_LOS_SHADERS',
+    subtitle:             'ML & Desarrollo Web — proyectos reales, entregados',
+    mlLabel:              'DESTACADO // ML',
+    mlTitle:              'GitQuery — Sistema de Recomendación de Repositorios',
+    mlDescription:        'Sistema de IA modular que recomienda repositorios de GitHub mediante recuperación híbrida y embeddings semánticos — proyecto de coursework en equipo en IE University / Seraphim Systems con un pipeline MLOps de nivel productivo.',
+    mlLongDescription:    'Backend en Python con embeddings de Sentence-Transformer almacenados en Qdrant. Un servidor MCP (Model Context Protocol) expone herramientas del recomendador a agentes LLM vía FastAPI. El entrenamiento está contenerizado con Docker Compose, es totalmente reanudable mediante checkpointing fragmentado, e incluye un bucle de monitoreo y reentrenamiento con CI/CD.',
+    mlFeatures: [
+      { topic: 'Recuperación Semántica',   detail: 'Embeddings de Sentence-Transformer + búsqueda vectorial en Qdrant para coincidencias precisas' },
+      { topic: 'Servidor MCP',             detail: 'Servidor Model Context Protocol que expone herramientas a agentes LLM vía FastAPI (puerto 8090)' },
+      { topic: 'Pipeline MLOps',           detail: 'Entrenamiento contenerizado, checkpointing fragmentado reanudable, bucle de evaluación y CI/CD' },
+      { topic: 'Microservicios Completos', detail: 'API de recomendación, servidor MCP, cliente CLI — orquestados con Docker Compose' },
+    ],
+    frontendLabel:        'DESTACADO // FRONTEND',
+    frontendTitle:        'Karsus Initiative — Tracker de Combate D&D',
+    frontendDescription:  'Rastreador de iniciativa D&D full-stack desplegado en Azure Static Web Apps — frontend React 18 + TypeScript respaldado por Azure Functions, Cosmos DB y Blob Storage.',
+    frontendLongDescription: 'Azure SWA + API de Functions v4 (Node.js / TypeScript), autenticación JWT RS256, Azure Cosmos DB para datos de encuentros y criaturas, Azure Blob Storage para imágenes. Infraestructura aprovisionada de principio a fin con Bicep IaC y Azure Developer CLI (azd).',
+    frontendFeatures: [
+      { topic: 'Azure SWA + Functions',     detail: 'Desplegado en Azure Static Web Apps con API integrada de Azure Functions v4 Node.js' },
+      { topic: 'Cosmos DB + Blob Storage',  detail: 'Datos NoSQL de encuentros y criaturas en Cosmos DB; imágenes en Azure Blob Storage' },
+      { topic: 'Auth JWT & Seguridad',      detail: 'Tokens RS256, Content Security Policy, Google OAuth, cabeceras de seguridad reforzadas' },
+      { topic: 'Bicep IaC',                 detail: 'Infraestructura Azure aprovisionada con plantillas Bicep + Azure Developer CLI (azd)' },
+    ],
     featuresTitle: 'CARACTERÍSTICAS CLAVE',
     source:        'CÓDIGO',
     demo:          'DEMO EN VIVO',
@@ -311,10 +355,28 @@ const pl: Translations = {
     ],
   },
   llm: {
-    heading:       '// POZA_SHADERAMI',
-    subtitle:      'ML & Tworzenie Stron — prawdziwe projekty, dostarczone',
-    mlLabel:       'WYRÓŻNIONY // ML',
-    frontendLabel: 'WYRÓŻNIONY // FRONTEND',
+    heading:              '// POZA_SHADERAMI',
+    subtitle:             'ML & Tworzenie Stron — prawdziwe projekty, dostarczone',
+    mlLabel:              'WYRÓŻNIONY // ML',
+    mlTitle:              'GitQuery — System Rekomendacji Repozytoriów',
+    mlDescription:        'Modularny system AI rekomendujący repozytoria GitHub za pomocą hybrydowego wyszukiwania i embeddingów semantycznych — projekt coursework w zespole na IE University / Seraphim Systems z potokiem MLOps klasy produkcyjnej.',
+    mlLongDescription:    'Backend w Pythonie z embeddingami Sentence-Transformer przechowywanymi w Qdrant. Własny serwer MCP (Model Context Protocol) udostępnia narzędzia rekomendatora agentom LLM przez FastAPI. Trening jest skonteneryzowany w Docker Compose, w pełni wznawiany przez fragmentowane checkpointowanie i zawiera pętlę monitorowania i re-treningu z CI/CD.',
+    mlFeatures: [
+      { topic: 'Wyszukiwanie Semantyczne', detail: 'Embeddingi Sentence-Transformer + wyszukiwanie wektorowe w Qdrant dla trafnych dopasowań' },
+      { topic: 'Serwer MCP',              detail: 'Serwer Model Context Protocol udostępniający narzędzia agentom LLM przez FastAPI (port 8090)' },
+      { topic: 'Potok MLOps',             detail: 'Skonteneryzowany trening, checkpointowanie fragmentowe, pętla ewaluacji i CI/CD' },
+      { topic: 'Pełne Mikroserwisy',      detail: 'API rekomendatora, serwer MCP, klient CLI — orkiestrowane przez Docker Compose' },
+    ],
+    frontendLabel:        'WYRÓŻNIONY // FRONTEND',
+    frontendTitle:        'Karsus Initiative — Tracker Inicjatywy D&D',
+    frontendDescription:  'Full-stack tracker inicjatywy D&D wdrożony na Azure Static Web Apps — frontend React 18 + TypeScript oparty na Azure Functions, Cosmos DB i Blob Storage.',
+    frontendLongDescription: 'Azure SWA + API Functions v4 (Node.js / TypeScript), uwierzytelnianie JWT RS256, Azure Cosmos DB na dane spotkań i stworzeń, Azure Blob Storage na obrazy. Infrastruktura ujęta w Bicep IaC i wdrożona przez Azure Developer CLI (azd).',
+    frontendFeatures: [
+      { topic: 'Azure SWA + Functions',    detail: 'Wdrożone na Azure Static Web Apps ze zintegrowanym API Azure Functions v4 Node.js' },
+      { topic: 'Cosmos DB + Blob Storage', detail: 'Dane NoSQL spotkań i stworzeń w Cosmos DB; obrazy w Azure Blob Storage' },
+      { topic: 'Auth JWT & Bezpieczeństwo',detail: 'Tokeny RS256, Content Security Policy, Google OAuth, hardened nagłówki bezpieczeństwa' },
+      { topic: 'Bicep IaC',               detail: 'Infrastruktura Azure w szablonach Bicep + Azure Developer CLI (azd)' },
+    ],
     featuresTitle: 'KLUCZOWE FUNKCJE',
     source:        'KOD',
     demo:          'DEMO NA ŻYWO',

@@ -25,6 +25,10 @@ function TagBadge({ tag, accent }: { tag: string; accent?: boolean }) {
 
 function DevProjectCard({
   project,
+  title,
+  description,
+  longDescription,
+  features,
   label,
   accent,
   icon: Icon,
@@ -33,6 +37,10 @@ function DevProjectCard({
   demoLabel,
 }: {
   project: Project;
+  title: string;
+  description: string;
+  longDescription?: string;
+  features?: { topic: string; detail: string }[];
   label: string;
   accent: 'cyan' | 'red';
   icon: typeof Brain;
@@ -40,12 +48,11 @@ function DevProjectCard({
   sourceLabel: string;
   demoLabel: string;
 }) {
-  const borderColor   = accent === 'red' ? 'border-cp-red/30'    : 'border-cp-cyan/30';
-  const accentText    = accent === 'red' ? 'text-cp-red'         : 'text-cp-cyan';
-  const accentNeon    = accent === 'red' ? 'neon-red'            : 'neon-cyan';
-  const accentBar     = accent === 'red' ? 'bg-cp-red'           : 'bg-cp-cyan';
-  const accentBg      = accent === 'red' ? 'bg-cp-red/5'         : 'bg-cp-cyan/5';
-  const tagAccent     = accent === 'red';
+  const borderColor  = accent === 'red' ? 'border-cp-red/30'  : 'border-cp-cyan/30';
+  const accentText   = accent === 'red' ? 'text-cp-red'       : 'text-cp-cyan';
+  const accentNeon   = accent === 'red' ? 'neon-red'          : 'neon-cyan';
+  const accentBorder = accent === 'red' ? 'border-cp-red'     : 'border-cp-cyan';
+  const tagAccent    = accent === 'red';
 
   return (
     <motion.div
@@ -58,7 +65,7 @@ function DevProjectCard({
       {/* Screenshot slot */}
       <div className="relative h-40 bg-cp-panel flex items-center justify-center overflow-hidden">
         {project.imageUrl ? (
-          <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
+          <img src={project.imageUrl} alt={title} className="w-full h-full object-cover" />
         ) : (
           <div className="text-center">
             <Icon size={24} className={`${accentText} mx-auto mb-2 opacity-40`} />
@@ -79,11 +86,11 @@ function DevProjectCard({
             className={`text-xl sm:text-2xl font-bold ${accentText} ${accentNeon} mb-2`}
             style={{ fontFamily: "'Rajdhani', sans-serif" }}
           >
-            {project.title}
+            {title}
           </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
-          {project.longDescription && (
-            <p className="text-cp-muted text-xs leading-relaxed mt-2">{project.longDescription}</p>
+          <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
+          {longDescription && (
+            <p className="text-cp-muted text-xs leading-relaxed mt-2">{longDescription}</p>
           )}
         </div>
 
@@ -95,14 +102,14 @@ function DevProjectCard({
         </div>
 
         {/* Features panel */}
-        {project.featuredFeatures && project.featuredFeatures.length > 0 && (
-          <div className={`${accentBg} border ${borderColor} p-4`}>
-            <p className="section-label mb-3">{featuresTitle}</p>
+        {features && features.length > 0 && (
+          <div className="bg-white border border-gray-200 p-4">
+            <p className="section-label text-gray-500 mb-3">{featuresTitle}</p>
             <div className="space-y-2.5">
-              {project.featuredFeatures.map(({ topic, detail }) => (
-                <div key={topic} className={`border-l-2 ${accentBar} pl-3`} style={{ borderColor: undefined }}>
-                  <p className={`${accentText} text-xs font-mono`}>{topic}</p>
-                  <p className="text-cp-muted text-xs">{detail}</p>
+              {features.map(({ topic, detail }) => (
+                <div key={topic} className={`border-l-2 ${accentBorder} pl-3`}>
+                  <p className="text-black text-xs font-mono font-semibold">{topic}</p>
+                  <p className="text-gray-700 text-xs">{detail}</p>
                 </div>
               ))}
             </div>
@@ -180,6 +187,10 @@ export default function LLMSection() {
         {mlProject && (
           <DevProjectCard
             project={mlProject}
+            title={t.llm.mlTitle}
+            description={t.llm.mlDescription}
+            longDescription={t.llm.mlLongDescription}
+            features={t.llm.mlFeatures}
             label={t.llm.mlLabel}
             accent="red"
             icon={Brain}
@@ -191,6 +202,10 @@ export default function LLMSection() {
         {frontendProject && (
           <DevProjectCard
             project={frontendProject}
+            title={t.llm.frontendTitle}
+            description={t.llm.frontendDescription}
+            longDescription={t.llm.frontendLongDescription}
+            features={t.llm.frontendFeatures}
             label={t.llm.frontendLabel}
             accent="cyan"
             icon={Globe}
