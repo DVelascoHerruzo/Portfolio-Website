@@ -61,7 +61,7 @@ export default function Navbar() {
           className="font-orbitron font-bold text-lg text-cp-yellow neon-yellow tracking-widest hover:opacity-80 transition-opacity"
           style={{ fontFamily: "'Orbitron', sans-serif" }}
         >
-          GFX.DEV
+          DVH.CMP
         </a>
 
         {/* Desktop Links */}

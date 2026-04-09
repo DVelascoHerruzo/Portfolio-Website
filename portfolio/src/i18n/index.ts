@@ -217,7 +217,7 @@ const es: Translations = {
     pretitle:    'OBJETIVO: CD PROJEKT RED — PRÁCTICAS DE VERANO 2026',
     subtitle:    'ESTUDIANTE CS & IA — GRÁFICOS & RENDERIZADO',
     tagline1:    '3er año de Informática e Inteligencia Artificial en IE University.',
-    tagline2:    'Apasionado del renderizado en tiempo real — escritor de shaders, autor de ReShade, aspirante a ingeniero gráfico.',
+    tagline2:    'Apasionado del renderizado en tiempo real — programmador de shaders, autor de ReShade, aspirante a ingeniero gráfico.',
     viewShaders: 'VER TRABAJO DE SHADERS',
     downloadCv:  'DESCARGAR CV',
   },

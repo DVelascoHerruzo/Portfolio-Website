@@ -110,7 +110,7 @@ export default function Contact() {
           className="text-cp-yellow neon-yellow text-sm tracking-widest mb-2"
           style={{ fontFamily: "'Orbitron', sans-serif" }}
         >
-          GFX.DEV
+          DVH.CMP
         </p>
         <p className="text-cp-muted text-xs font-mono">
           {t.contact.footerBuilt} {new Date().getFullYear()}

@@ -108,8 +108,8 @@ function DevProjectCard({
             <div className="space-y-2.5">
               {features.map(({ topic, detail }) => (
                 <div key={topic} className={`border-l-2 ${accentBorder} pl-3`}>
-                  <p className="text-black text-xs font-mono font-semibold">{topic}</p>
-                  <p className="text-black text-xs">{detail}</p>
+                  <p className="text-white text-xs font-mono font-semibold">{topic}</p>
+                  <p className="text-white text-xs">{detail}</p>
                 </div>
               ))}
             </div>
