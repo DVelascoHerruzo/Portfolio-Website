@@ -85,7 +85,7 @@ export default function Navbar() {
           })}
           <LanguageSwitcher />
           <a
-            href={`${import.meta.env.BASE_URL}cv.pdf`}
+            href={`${import.meta.env.BASE_URL}CV_David_Velasco_Herruzo.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 px-4 py-1.5 border border-cp-yellow text-cp-yellow text-sm font-mono tracking-wider hover:bg-cp-yellow hover:text-cp-black transition-all duration-200 clip-corner"
@@ -122,7 +122,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between pt-2 border-t border-cp-border">
             <LanguageSwitcher />
             <a
-              href={`${import.meta.env.BASE_URL}cv.pdf`}
+              href={`${import.meta.env.BASE_URL}CV_David_Velasco_Herruzo.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-1.5 border border-cp-yellow text-cp-yellow text-sm font-mono hover:bg-cp-yellow hover:text-cp-black transition-all"

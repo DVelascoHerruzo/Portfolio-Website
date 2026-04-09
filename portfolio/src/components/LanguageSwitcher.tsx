@@ -51,17 +51,17 @@ export default function LanguageSwitcher() {
                 />
                 {showWarning && (
                   <div
-                    className="absolute bottom-full right-0 mb-2 w-56 z-[200] pointer-events-none"
+                    className="absolute top-full right-0 mt-2 w-56 z-[200] pointer-events-none"
                     style={{ fontFamily: "'Share Tech Mono', monospace" }}
                   >
+                    {/* arrow */}
+                    <div className="absolute right-1 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-cp-yellow/50" />
                     <div className="bg-cp-black border border-cp-yellow/50 p-2.5 text-xs leading-relaxed">
                       <span className="text-cp-yellow font-semibold flex items-center gap-1 mb-1">
                         <AlertTriangle size={10} /> UWAGA / WARNING
                       </span>
                       <span className="text-cp-muted">{warning}</span>
                     </div>
-                    {/* arrow */}
-                    <div className="absolute right-1 top-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-cp-yellow/50" />
                   </div>
                 )}
               </div>

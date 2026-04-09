@@ -90,7 +90,7 @@ const en: Translations = {
   nav: {
     skills:  '// SKILLS',
     shaders: '// SHADERS',
-    llm:     '// LLM',
+    llm:     '// BEYOND',
     lore:    '// LORE',
     contact: '// CONTACT',
     resume:  'RESUME↗',
@@ -208,7 +208,7 @@ const es: Translations = {
   nav: {
     skills:  '// HABILIDADES',
     shaders: '// SHADERS',
-    llm:     '// LLM',
+    llm:     '// MÁS_ALLÁ',
     lore:    '// LORE',
     contact: '// CONTACTO',
     resume:  'CV↗',
@@ -326,7 +326,7 @@ const pl: Translations = {
   nav: {
     skills:  '// UMIEJĘTNOŚCI',
     shaders: '// SHADERY',
-    llm:     '// LLM',
+    llm:     '// WIĘCEJ',
     lore:    '// LORE',
     contact: '// KONTAKT',
     resume:  'CV↗',

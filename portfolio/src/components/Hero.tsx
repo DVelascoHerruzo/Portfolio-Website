@@ -107,7 +107,7 @@ export default function Hero() {
             {t.hero.viewShaders}
           </button>
           <a
-            href="/cv.pdf"
+            href="/CV_David_Velasco_Herruzo.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 border border-cp-cyan text-cp-cyan font-bold tracking-widest text-sm clip-corner hover:bg-cp-cyan hover:text-cp-black transition-all duration-200"
