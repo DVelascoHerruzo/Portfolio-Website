@@ -1,0 +1,397 @@
+export type Language = 'en' | 'es' | 'pl';
+
+export interface Translations {
+  nav: {
+    skills: string;
+    shaders: string;
+    llm: string;
+    lore: string;
+    contact: string;
+    resume: string;
+  };
+  hero: {
+    pretitle: string;
+    subtitle: string;
+    tagline1: string;
+    tagline2: string;
+    viewShaders: string;
+    downloadCv: string;
+  };
+  skills: {
+    heading: string;
+    rendering: string;
+    shading: string;
+    apis: string;
+    languages: string;
+    ai: string;
+    web: string;
+  };
+  shaderWork: {
+    heading: string;
+    featured: string;
+    demosInclude: string;
+    launchPlayground: string;
+    reshadeSection: string;
+    reshadeSubtitle: string;
+    source: string;
+    demo: string;
+    demos: { topic: string; detail: string }[];
+  };
+  llm: {
+    heading: string;
+    subtitle: string;
+    items: { title: string; body: string }[];
+  };
+  lore: {
+    heading: string;
+    subtitle: string;
+    quote1: string;
+    quote2: string;
+    tabletopLabel: string;
+    tabletopHeading: string;
+    tabletopHighlights: string[];
+    tabletopFooterPre: string;
+    tabletopFooterHighlight: string;
+    tabletopFooterPost: string;
+    cyberpunkLabel: string;
+    cyberpunkHeading: string;
+    cyberpunkHighlights: string[];
+    cyberpunkFooterPre: string;
+    cyberpunkFooterHighlight: string;
+    cyberpunkFooterPost: string;
+    editionsLabel: string;
+  };
+  contact: {
+    heading: string;
+    subtitle1: string;
+    subtitle2: string;
+    footerBuilt: string;
+    footerTargeting: string;
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ENGLISH
+// ─────────────────────────────────────────────────────────────────────────────
+const en: Translations = {
+  nav: {
+    skills:  '// SKILLS',
+    shaders: '// SHADERS',
+    llm:     '// LLM',
+    lore:    '// LORE',
+    contact: '// CONTACT',
+    resume:  'RESUME↗',
+  },
+  hero: {
+    pretitle:    'TARGETING: CD PROJEKT RED — SUMMER INTERNSHIP 2026',
+    subtitle:    'CS & AI STUDENT — GRAPHICS & RENDERING',
+    tagline1:    '3rd year Computer Science & AI at IE University.',
+    tagline2:    'Obsessed with real-time rendering — shader writer, ReShade author, aspiring graphics engineer.',
+    viewShaders: 'VIEW SHADER WORK',
+    downloadCv:  'DOWNLOAD CV',
+  },
+  skills: {
+    heading:   '// SKILL_MATRIX',
+    rendering: 'RENDERING',
+    shading:   'SHADING LANGUAGES',
+    apis:      'APIs & ENGINES',
+    languages: 'LANGUAGES & TOOLS',
+    ai:        'AI / MACHINE LEARNING',
+    web:       'WEB DEVELOPMENT',
+  },
+  shaderWork: {
+    heading:          '// SHADER_WORK',
+    featured:         'FEATURED PROJECT',
+    demosInclude:     'DEMOS INCLUDE',
+    launchPlayground: 'LAUNCH PLAYGROUND',
+    reshadeSection:   'RESHADE PROJECTS',
+    reshadeSubtitle:  'post-processing presets & studies',
+    source:           'SOURCE',
+    demo:             'DEMO',
+    demos: [
+      { topic: 'Terrain Generation', detail: 'Multi-octave FBM noise, heightmap-to-mesh' },
+      { topic: 'Ray Marching',       detail: 'SDF primitives, soft shadows, AO' },
+      { topic: 'Volumetric Clouds',  detail: 'Density ray-march, Beer-Lambert lighting' },
+      { topic: 'Path Tracing',       detail: 'Global illumination, Monte Carlo sampling' },
+      { topic: 'Physics Sims',       detail: 'Particle systems, fluid approximations' },
+    ],
+  },
+  llm: {
+    heading:  '// BEYOND_RENDERING',
+    subtitle: 'CS & AI degree — academic foundation & cross-discipline thinking',
+    items: [
+      {
+        title: 'CS & AI Degree — IE University',
+        body: "3rd year Bachelor's in Computer Science & Artificial Intelligence at IE University. Coursework spans algorithms & data structures, machine learning theory, linear algebra, statistics, operating systems, and software engineering — building a solid foundation across the full CS stack.",
+      },
+      {
+        title: 'Machine Learning Foundations',
+        body: "University coursework covering supervised and unsupervised learning: regression, classification, clustering, neural networks, and model evaluation. Hands-on with Python's ML stack — NumPy, pandas, Matplotlib, and scikit-learn — for data analysis and modelling assignments.",
+      },
+      {
+        title: 'Software Engineering Breadth',
+        body: 'Beyond ML, the degree covers systems programming, algorithms, databases, and software architecture. Comfortable with Python, C++, and JavaScript — and with picking up new tools and frameworks quickly in a professional environment.',
+      },
+      {
+        title: "Why It's Relevant to CDPR",
+        body: "CD Projekt RED is actively hiring for LLM & AI specialist roles — a signal the studio is investing heavily in AI-powered tooling, NPC systems, and internal automation. My CS + AI background makes me a natural fit to grow into that space at CDPR, even while joining through the graphics track.",
+      },
+    ],
+  },
+  lore: {
+    heading:  '// JACK_IN — WHY.CDPR',
+    subtitle: "The case for why this isn't just a job application — it's a homecoming.",
+    quote1:   "I don't just want to render Night City.",
+    quote2:   "I've been building cities like it for years.",
+    tabletopLabel:   'TABLETOP ARCHITECT',
+    tabletopHeading: '7 Years at the Table',
+    tabletopHighlights: [
+      '7 years playing D&D — several as Dungeon Master',
+      'Deep homebrew design: custom mechanics, world-building systems, faction logic',
+      'Adapted CD Projekt RED videogame systems (economy, cyberware, reputation) into tabletop campaigns',
+      'Strong understanding of game balance, player agency, and narrative-mechanical feedback loops',
+      'Built a full-stack online platform for Theater of the Mind D&D — real-time session tools, player dashboards, and DM tooling — in React + TypeScript',
+    ],
+    tabletopFooterPre:       'Years of DMing translate directly to',
+    tabletopFooterHighlight: 'systems design thinking',
+    tabletopFooterPost:      '— and building the D&D platform proved it: shipping a real product end-to-end, not just theory.',
+    cyberpunkLabel:   'CYBERPUNK DEVOTEE',
+    cyberpunkHeading: 'All Editions. All Lore.',
+    cyberpunkHighlights: [
+      'All Cyberpunk TTRPG editions: Cyberpunk 2020, V3, RED, and the original Corebook',
+      'Deep lore knowledge: Corporations, Edgerunners, NET architecture, the Blackhand timeline',
+      "Pondsmith's design philosophy — how the setting translates across media",
+      'Ran Cyberpunk RED campaigns with custom conversions of CP2077 locations and factions',
+      'Studied how CDPR adapted the source material for Cyberpunk 2077 and Edgerunners',
+    ],
+    cyberpunkFooterPre:       "This isn't just fan passion — it's deep familiarity with",
+    cyberpunkFooterHighlight: 'the world CDPR builds for',
+    cyberpunkFooterPost:      '. I understand what Night City should feel like, and I want to help render it.',
+    editionsLabel: 'CYBERPUNK EDITIONS PLAYED:',
+  },
+  contact: {
+    heading:         '// OPEN_CHANNEL',
+    subtitle1:       'Interested in my work, or have a question about my application?',
+    subtitle2:       'Reach out through any channel below.',
+    footerBuilt:     'Built with React + Vite + TailwindCSS v4 ·',
+    footerTargeting: 'Targeting CD Projekt RED — Summer Internship · Graphics & Rendering',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SPANISH
+// ─────────────────────────────────────────────────────────────────────────────
+const es: Translations = {
+  nav: {
+    skills:  '// HABILIDADES',
+    shaders: '// SHADERS',
+    llm:     '// LLM',
+    lore:    '// LORE',
+    contact: '// CONTACTO',
+    resume:  'CV↗',
+  },
+  hero: {
+    pretitle:    'OBJETIVO: CD PROJEKT RED — PRÁCTICAS DE VERANO 2026',
+    subtitle:    'ESTUDIANTE CS & IA — GRÁFICOS & RENDERIZADO',
+    tagline1:    '3er año de Informática e Inteligencia Artificial en IE University.',
+    tagline2:    'Apasionado del renderizado en tiempo real — escritor de shaders, autor de ReShade, aspirante a ingeniero gráfico.',
+    viewShaders: 'VER TRABAJO DE SHADERS',
+    downloadCv:  'DESCARGAR CV',
+  },
+  skills: {
+    heading:   '// MATRIZ_DE_HABILIDADES',
+    rendering: 'RENDERIZADO',
+    shading:   'LENGUAJES DE SHADER',
+    apis:      'APIs & MOTORES',
+    languages: 'LENGUAJES & HERRAMIENTAS',
+    ai:        'IA / MACHINE LEARNING',
+    web:       'DESARROLLO WEB',
+  },
+  shaderWork: {
+    heading:          '// TRABAJO_DE_SHADERS',
+    featured:         'PROYECTO DESTACADO',
+    demosInclude:     'DEMOS INCLUIDAS',
+    launchPlayground: 'ABRIR PLAYGROUND',
+    reshadeSection:   'PROYECTOS RESHADE',
+    reshadeSubtitle:  'presets de post-procesado y estudios',
+    source:           'CÓDIGO',
+    demo:             'DEMO',
+    demos: [
+      { topic: 'Generación de Terreno', detail: 'FBM multi-octava, heightmap a malla' },
+      { topic: 'Ray Marching',          detail: 'Primitivas SDF, sombras suaves, AO' },
+      { topic: 'Nubes Volumétricas',    detail: 'Ray-march de densidad, iluminación Beer-Lambert' },
+      { topic: 'Path Tracing',          detail: 'Iluminación global, muestreo Monte Carlo' },
+      { topic: 'Simulaciones Físicas',  detail: 'Sistemas de partículas, aproximaciones de fluidos' },
+    ],
+  },
+  llm: {
+    heading:  '// MÁS_ALLÁ_DEL_RENDER',
+    subtitle: 'Grado en CS & IA — base académica y pensamiento interdisciplinar',
+    items: [
+      {
+        title: 'Grado en CS & IA — IE University',
+        body: '3er año del Grado en Informática e Inteligencia Artificial en IE University. El plan de estudios abarca algoritmos y estructuras de datos, teoría del aprendizaje automático, álgebra lineal, estadística, sistemas operativos e ingeniería del software.',
+      },
+      {
+        title: 'Fundamentos de Machine Learning',
+        body: 'Asignaturas universitarias de aprendizaje supervisado y no supervisado: regresión, clasificación, clustering, redes neuronales y evaluación de modelos. Práctica con NumPy, pandas, Matplotlib y scikit-learn.',
+      },
+      {
+        title: 'Amplitud en Ingeniería del Software',
+        body: 'Más allá del ML, el grado cubre programación de sistemas, algoritmos, bases de datos y arquitectura de software. Cómodo con Python, C++ y JavaScript, y con aprender rápidamente nuevas herramientas en entornos profesionales.',
+      },
+      {
+        title: 'Por qué es Relevante para CDPR',
+        body: 'CD Projekt RED está contratando activamente perfiles especializados en LLM e IA — una señal de que el estudio está invirtiendo fuertemente en herramientas basadas en IA, sistemas de NPCs y automatización interna. Mi formación en CS + IA me posiciona para crecer en esa área en CDPR.',
+      },
+    ],
+  },
+  lore: {
+    heading:  '// CONECTAR — POR_QUÉ.CDPR',
+    subtitle: 'La razón por la que esto no es solo una solicitud de empleo — es volver a casa.',
+    quote1:   'No solo quiero renderizar Night City.',
+    quote2:   'Llevo años construyendo ciudades como esta.',
+    tabletopLabel:   'ARQUITECTO DE MESA',
+    tabletopHeading: '7 Años en la Mesa',
+    tabletopHighlights: [
+      '7 años jugando a D&D — varios como Dungeon Master',
+      'Diseño homebrew profundo: mecánicas personalizadas, sistemas de world-building, lógica de facciones',
+      'Adapté los sistemas de los videojuegos de CD Projekt RED (economía, ciberware, reputación) a campañas de rol',
+      'Sólida comprensión del equilibrio de juego, la agencia del jugador y los bucles narrativo-mecánicos',
+      'Desarrollé una plataforma web completa para D&D Teatro de la Mente — herramientas en tiempo real, paneles de jugadores y utilidades para el DM — en React + TypeScript',
+    ],
+    tabletopFooterPre:       'Años de DM se traducen directamente en',
+    tabletopFooterHighlight: 'pensamiento de diseño de sistemas',
+    tabletopFooterPost:      '— y construir la plataforma D&D lo demostró: lanzar un producto real de principio a fin, no solo teoría.',
+    cyberpunkLabel:   'DEVOTO CYBERPUNK',
+    cyberpunkHeading: 'Todas las Ediciones. Todo el Lore.',
+    cyberpunkHighlights: [
+      'Todas las ediciones del TTRPG Cyberpunk: Cyberpunk 2020, V3, RED y el Corebook original',
+      'Conocimiento profundo del lore: Corporaciones, Edgerunners, arquitectura NET, la línea temporal de Blackhand',
+      'Filosofía de diseño de Pondsmith — cómo el universo se traslada a distintos medios',
+      'Dirigí campañas de Cyberpunk RED con conversiones personalizadas de localizaciones y facciones de CP2077',
+      'Estudié cómo CDPR adaptó el material original para Cyberpunk 2077 y Edgerunners',
+    ],
+    cyberpunkFooterPre:       'Esto no es solo pasión de fan — es un conocimiento profundo de',
+    cyberpunkFooterHighlight: 'el mundo que CDPR construye',
+    cyberpunkFooterPost:      '. Entiendo cómo debe sentirse Night City, y quiero ayudar a renderizarla.',
+    editionsLabel: 'EDICIONES DE CYBERPUNK JUGADAS:',
+  },
+  contact: {
+    heading:         '// CANAL_ABIERTO',
+    subtitle1:       '¿Interesado en mi trabajo o tienes alguna pregunta sobre mi candidatura?',
+    subtitle2:       'Contáctame a través de cualquier canal.',
+    footerBuilt:     'Hecho con React + Vite + TailwindCSS v4 ·',
+    footerTargeting: 'Aplicando a CD Projekt RED — Prácticas de Verano · Gráficos & Renderizado',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POLISH  (⚠ Not a native speaker — translations may contain errors)
+// ─────────────────────────────────────────────────────────────────────────────
+const pl: Translations = {
+  nav: {
+    skills:  '// UMIEJĘTNOŚCI',
+    shaders: '// SHADERY',
+    llm:     '// LLM',
+    lore:    '// LORE',
+    contact: '// KONTAKT',
+    resume:  'CV↗',
+  },
+  hero: {
+    pretitle:    'CEL: CD PROJEKT RED — STAŻ LETNI 2026',
+    subtitle:    'STUDENT CS & AI — GRAFIKA & RENDEROWANIE',
+    tagline1:    '3. rok informatyki i sztucznej inteligencji na IE University.',
+    tagline2:    'Zafascynowany renderowaniem w czasie rzeczywistym — autor shaderów, twórca ReShade, przyszły inżynier grafiki.',
+    viewShaders: 'ZOBACZ PRACE Z SHADERAMI',
+    downloadCv:  'POBIERZ CV',
+  },
+  skills: {
+    heading:   '// MACIERZ_UMIEJĘTNOŚCI',
+    rendering: 'RENDEROWANIE',
+    shading:   'JĘZYKI SHADERÓW',
+    apis:      'API & SILNIKI',
+    languages: 'JĘZYKI & NARZĘDZIA',
+    ai:        'AI / UCZENIE MASZYNOWE',
+    web:       'TWORZENIE STRON',
+  },
+  shaderWork: {
+    heading:          '// PRACA_Z_SHADERAMI',
+    featured:         'WYRÓŻNIONY PROJEKT',
+    demosInclude:     'DEMO ZAWIERAJĄ',
+    launchPlayground: 'URUCHOM PLAYGROUND',
+    reshadeSection:   'PROJEKTY RESHADE',
+    reshadeSubtitle:  'presety post-processingu i studia',
+    source:           'KOD',
+    demo:             'DEMO',
+    demos: [
+      { topic: 'Generowanie Terenu',   detail: 'FBM wielooktawowy, mapa wysokości do siatki' },
+      { topic: 'Ray Marching',         detail: 'Prymitywy SDF, miękkie cienie, AO' },
+      { topic: 'Chmury Wolumetryczne', detail: 'Ray-march gęstości, oświetlenie Beer-Lamberta' },
+      { topic: 'Path Tracing',         detail: 'Globalne oświetlenie, próbkowanie Monte Carlo' },
+      { topic: 'Symulacje Fizyczne',   detail: 'Systemy cząstek, przybliżenia płynów' },
+    ],
+  },
+  llm: {
+    heading:  '// POZA_RENDEROWANIEM',
+    subtitle: 'Studia z CS & AI — podstawy akademickie i myślenie wielodyscyplinarne',
+    items: [
+      {
+        title: 'Studia CS & AI — IE University',
+        body: '3. rok licencjatu z Informatyki i Sztucznej Inteligencji na IE University. Program obejmuje algorytmy i struktury danych, teorię uczenia maszynowego, algebrę liniową, statystykę, systemy operacyjne i inżynierię oprogramowania.',
+      },
+      {
+        title: 'Podstawy Machine Learning',
+        body: 'Zajęcia uczelni obejmujące uczenie nadzorowane i nienadzorowane: regresja, klasyfikacja, klasteryzacja, sieci neuronowe i ewaluacja modeli. Praktyka z NumPy, pandas, Matplotlib i scikit-learn.',
+      },
+      {
+        title: 'Szeroki Zakres Inżynierii Oprogramowania',
+        body: 'Poza ML, studia obejmują programowanie systemów, algorytmy, bazy danych i architekturę oprogramowania. Swoboda z Pythonem, C++ i JavaScriptem — oraz szybkie uczenie się nowych narzędzi.',
+      },
+      {
+        title: 'Dlaczego to Jest Istotne dla CDPR',
+        body: 'CD Projekt RED aktywnie zatrudnia specjalistów od LLM i AI — sygnał, że studio intensywnie inwestuje w narzędzia oparte na AI, systemy NPC i automatyzację wewnętrzną. Moje wykształcenie z CS + AI sprawia, że naturalnie pasuję do tej przestrzeni w CDPR.',
+      },
+    ],
+  },
+  lore: {
+    heading:  '// POŁĄCZ_SIĘ — DLACZEGO.CDPR',
+    subtitle: 'Powód, dla którego to nie jest zwykła aplikacja — to powrót do domu.',
+    quote1:   'Nie chcę tylko renderować Night City.',
+    quote2:   'Buduję takie miasta od lat.',
+    tabletopLabel:   'ARCHITEKT STOŁOWY',
+    tabletopHeading: '7 Lat przy Stole',
+    tabletopHighlights: [
+      '7 lat grania w D&D — kilka jako Mistrz Gry',
+      'Głęboki design homebrew: własne mechaniki, systemy budowania świata, logika frakcji',
+      'Zaadaptowałem systemy gier wideo CD Projekt RED (ekonomia, cyberware, reputacja) do kampanii RPG',
+      'Dobre zrozumienie balansu gry, sprawczości gracza i pętli narracyjno-mechanicznych',
+      'Zbudowałem pełnostackową platformę online dla D&D Theater of the Mind — narzędzia sesji, pulpity gracza i narzędzia Mistrza Gry — w React + TypeScript',
+    ],
+    tabletopFooterPre:       'Lata prowadzenia gier przekładają się bezpośrednio w',
+    tabletopFooterHighlight: 'myślenie projektowe systemów',
+    tabletopFooterPost:      '— a budowa platformy D&D to udowodniła: dostarczenie prawdziwego produktu od A do Z.',
+    cyberpunkLabel:   'MIŁOŚNIK CYBERPUNKA',
+    cyberpunkHeading: 'Wszystkie Edycje. Cały Lore.',
+    cyberpunkHighlights: [
+      'Wszystkie edycje TTRPG Cyberpunk: Cyberpunk 2020, V3, RED i oryginalny Corebook',
+      'Głęboka wiedza o lore: Korporacje, Edgerunnerzy, architektura NET, oś czasu Blackhanda',
+      'Filozofia projektowania Pondsmitha — jak setting przekłada się na różne media',
+      'Prowadziłem kampanie Cyberpunk RED z własnymi konwersjami lokacji i frakcji z CP2077',
+      'Studiowałem, jak CDPR zaadaptował materiał źródłowy do Cyberpunk 2077 i Edgerunnerów',
+    ],
+    cyberpunkFooterPre:       'To nie tylko fandom — to głęboka znajomość',
+    cyberpunkFooterHighlight: 'świata, który buduje CDPR',
+    cyberpunkFooterPost:      '. Rozumiem, jak powinno wyglądać Night City, i chcę pomóc to renderować.',
+    editionsLabel: 'EDYCJE CYBERPUNKA:',
+  },
+  contact: {
+    heading:         '// OTWARTY_KANAŁ',
+    subtitle1:       'Zainteresowany moją pracą lub masz pytanie dotyczące mojej aplikacji?',
+    subtitle2:       'Skontaktuj się przez dowolny kanał poniżej.',
+    footerBuilt:     'Zbudowane z React + Vite + TailwindCSS v4 ·',
+    footerTargeting: 'Aplikacja do CD Projekt RED — Staż Letni · Grafika & Renderowanie',
+  },
+};
+
+export const translations: Record<Language, Translations> = { en, es, pl };
