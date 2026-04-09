@@ -103,13 +103,13 @@ function DevProjectCard({
 
         {/* Features panel */}
         {features && features.length > 0 && (
-          <div className="bg-white border border-gray-200 p-4">
-            <p className="section-label text-gray-500 mb-3">{featuresTitle}</p>
+          <div className={`${accent === 'red' ? 'bg-cp-red/5 border-cp-red/30' : 'bg-cp-cyan/5 border-cp-cyan/30'} border p-4`}>
+            <p className="section-label text-cp-muted mb-3">{featuresTitle}</p>
             <div className="space-y-2.5">
               {features.map(({ topic, detail }) => (
                 <div key={topic} className={`border-l-2 ${accentBorder} pl-3`}>
                   <p className="text-black text-xs font-mono font-semibold">{topic}</p>
-                  <p className="text-gray-700 text-xs">{detail}</p>
+                  <p className="text-black text-xs">{detail}</p>
                 </div>
               ))}
             </div>
