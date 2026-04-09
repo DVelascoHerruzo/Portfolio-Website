@@ -33,32 +33,32 @@ export const projects: Project[] = [
   // ── ReShade Projects ───────────────────────────────────────────────
   {
     id: 'reshade-cyberpunk',
-    title: 'ReShade — Cyberpunk 2077 Cinematic',
+    title: 'ASCII Art Effect',
     description:
-      'Custom ReShade preset for Cyberpunk 2077 focused on preserving Night City\'s neon identity while correcting bloom, adding filmic tonemapping, and tightening chromatic aberration.',
-    tags: ['ReShade', 'HLSL', 'Tonemapping', 'Bloom', 'Post-Processing', 'Cyberpunk 2077'],
+      'Converts the screen to ASCII art using Difference-of-Gaussians edge detection and a character-map texture lookup. Features depth-based edge weighting, adjustable zoom, offset, and blur kernel for expressive control.',
+    tags: ['ReShade', 'HLSL', 'ASCII', 'Edge Detection', 'DoG', 'Post-Processing'],
     imageUrl: 'images/ASCII.png',
-    githubUrl: 'https://github.com/L96Expanded/ReShade-Shader-Projects/blob/main/Barope%20Shaders/ASCII.fx', // TODO: replace with repo URL
+    githubUrl: 'https://github.com/L96Expanded/ReShade-Shader-Projects/blob/main/Barope%20Shaders/ASCII.fx',
     category: 'reshade',
   },
   {
     id: 'reshade-witcher',
-    title: 'ReShade — The Witcher 3 Painterly',
+    title: 'Palette Swap',
     description:
-      'A painterly ReShade preset for The Witcher 3 that darkens shadows, enhances ambient occlusion, and adds subtle color grading to push the game closer to high-fantasy oil-painting aesthetics.',
-    tags: ['ReShade', 'HLSL', 'Color Grading', 'AO', 'Post-Processing', 'The Witcher 3'],
+      'Replaces all screen colors with the closest match from a user-defined palette of up to 8 custom colors — ideal for retro aesthetics, forced color grading, and stylised visual effects.',
+    tags: ['ReShade', 'HLSL', 'Color Quantization', 'Palette', 'Retro', 'Post-Processing'],
     imageUrl: 'images/PaletteSwap.png',
-    githubUrl: 'https://github.com/L96Expanded/ReShade-Shader-Projects/blob/main/Barope%20Shaders/PaletteSwap.fx', // TODO: replace with repo URL
+    githubUrl: 'https://github.com/L96Expanded/ReShade-Shader-Projects/blob/main/Barope%20Shaders/PaletteSwap.fx',
     category: 'reshade',
   },
   {
     id: 'reshade-depth',
-    title: 'ReShade — Depth-of-Field Suite',
+    title: 'Pixel Sorting',
     description:
-      'Custom ReShade depth-of-field implementation with adjustable bokeh shape, aperture, and focus distance — built to study how CoC calculations map to real camera optics.',
-    tags: ['ReShade', 'HLSL', 'Depth of Field', 'Bokeh', 'CoC', 'Post-Processing'],
+      'Sorts pixels within luminance-masked spans by hue, saturation, or luminance — producing the classic glitch-art pixel-sorting effect. Fully controllable with threshold masking, span length limits, and animated offsets.',
+    tags: ['ReShade', 'HLSL', 'Pixel Sorting', 'Glitch Art', 'Compute Shaders', 'Post-Processing'],
     imageUrl: 'images/PixelSorting.png',
-    githubUrl: 'https://github.com/', // TODO: replace with repo URL
+    githubUrl: 'https://github.com/L96Expanded/ReShade-Shader-Projects/blob/main/Barope%20Shaders/PixelSort.fx',
     category: 'reshade',
   },
 
