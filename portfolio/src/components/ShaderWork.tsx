@@ -52,7 +52,7 @@ function ReShadeCard({ project, description }: { project: typeof reshadeProjects
         <p className="text-cp-muted text-xs leading-relaxed flex-1">{description ?? project.description}</p>
 
         <div className="flex flex-wrap gap-1.5 mt-auto">
-          {project.tags.map(t => <TagBadge key={t} tag={t} />)}
+          {project.tags.map(tag => <TagBadge key={tag} tag={tag} />)}
         </div>
 
         <div className="flex items-center gap-3 pt-2 border-t border-cp-border">
@@ -146,9 +146,9 @@ export default function ShaderWork() {
               )}
 
               <div className="flex flex-wrap gap-1.5 mb-6">
-                {featuredProject.tags.map(t => (
-                  <span key={t} className="px-2 py-0.5 text-xs border border-cp-yellow/40 text-cp-yellow/80 bg-cp-yellow/5 font-mono">
-                    {t}
+                {featuredProject.tags.map(tag => (
+                  <span key={tag} className="px-2 py-0.5 text-xs border border-cp-yellow/40 text-cp-yellow/80 bg-cp-yellow/5 font-mono">
+                    {tag}
                   </span>
                 ))}
               </div>

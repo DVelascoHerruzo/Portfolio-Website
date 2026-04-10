@@ -21,11 +21,12 @@ export const projects: Project[] = [
     id: 'shader-playground',
     title: 'Shader Playground',
     description:
-      'A collection of real-time shader experiments exploring terrain generation, ray-marched SDFs, volumetric clouds, and physics simulations — all running in the browser.',
+      'A real-time forward renderer built in C++ and HLSL on DirectX 11 — GPU-tessellated procedural terrain, screen-space heightmap ray tracing for water reflections/refractions, Beer-Lambert water absorption, 3-cascade PCF shadow maps, and a full post-process pipeline including SSGI, god rays, and ACES tonemap.',
     longDescription:
-      'Built iteratively on Shadertoy, this playground covers procedural terrain via multi-octave FBM noise, sphere-traced signed-distance fields for rigid-body approximations, volumetric cloud rendering using ray-marching through density fields, and a basic path tracer demonstrating global illumination concepts.',
-    tags: ['GLSL', 'Ray Marching', 'Terrain Gen', 'SDF', 'Volumetric', 'Path Tracing', ],
+      'Written from scratch: Win32/DX11 device setup, typed constant-buffer wrappers, hot HLSL shader reload (F5), and an ImGui docking UI with live sliders for every parameter. Terrain generates async on CPU with domain-warped FBM + hydraulic erosion, then tessellates on the GPU via hull/domain shaders with screen-space LOD. Water combines Gerstner wave displacement, GGX specular, Fresnel, Beer-Lambert depth absorption, and a dedicated reflection/refraction pre-render pass.',
+    tags: ['C++', 'HLSL', 'DirectX 11', 'GPU Tessellation', 'PBR', 'Screen-Space RT', 'SSGI', 'CMake'],
     videoUrl: 'images/Recording%202026-04-09%20130920.mp4',
+    githubUrl: 'https://github.com/DVelascoHerruzo/Shader_Playground',
     category: 'shader',
     featured: true,
   },
