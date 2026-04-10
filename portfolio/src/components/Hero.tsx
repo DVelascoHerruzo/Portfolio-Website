@@ -36,21 +36,58 @@ export default function Hero() {
         />
       </div>
 
+      {/* Glitch scan lines — periodic horizontal sweeps */}
+      <div
+        className="absolute top-0 inset-x-0 h-[1.5px] pointer-events-none"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(0,240,255,0.8) 25%, rgba(255,255,255,0.3) 50%, rgba(0,240,255,0.8) 75%, transparent 100%)',
+          animation: 'scan-down 9s linear 0.5s infinite',
+          zIndex: 2,
+        }}
+      />
+      <div
+        className="absolute top-0 inset-x-0 h-px pointer-events-none"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(255,0,60,0.55) 40%, rgba(252,238,9,0.2) 60%, transparent 100%)',
+          animation: 'scan-down 13s linear 3.5s infinite',
+          zIndex: 2,
+        }}
+      />
+      {/* Brief RGB flash overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'rgba(0,240,255,0.025)',
+          animation: 'rgb-flash 11s linear infinite',
+          zIndex: 2,
+        }}
+      />
+
       {/* Neon perspective grid — parallaxes faster */}
       <motion.div
         style={{ y: gridY }}
-        className="absolute inset-x-0 bottom-0 h-72 pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-[520px] pointer-events-none"
       >
         <div
           className="w-full h-full"
           style={{
             background:
-              'linear-gradient(to top, #00f0ff0a, transparent), repeating-linear-gradient(90deg, #00f0ff07 0px, #00f0ff07 1px, transparent 1px, transparent 50px)',
+              'linear-gradient(to top, #00f0ff1e, transparent), repeating-linear-gradient(90deg, #00f0ff16 0px, #00f0ff16 1px, transparent 1px, transparent 50px)',
             maskImage: 'linear-gradient(to top, black, transparent)',
             WebkitMaskImage: 'linear-gradient(to top, black, transparent)',
           }}
         />
       </motion.div>
+
+      {/* Horizon glow — neon floor line at bottom edge (bridges into next section) */}
+      <div
+        className="absolute bottom-0 inset-x-0 h-px pointer-events-none"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(0,240,255,0.55) 15%, rgba(0,240,255,0.9) 50%, rgba(0,240,255,0.55) 85%, transparent 100%)',
+          boxShadow: '0 0 10px rgba(0,240,255,0.5), 0 0 28px rgba(0,240,255,0.18)',
+          zIndex: 3,
+        }}
+      />
 
       {/* Content — fades + drifts up on scroll */}
       <motion.div
@@ -72,7 +109,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="glitch text-5xl sm:text-6xl md:text-7xl font-black tracking-widest text-cp-yellow neon-yellow mb-4 leading-none uppercase"
+          className="glitch glitch-auto text-5xl sm:text-6xl md:text-7xl font-black tracking-widest text-cp-yellow neon-yellow mb-4 leading-none uppercase"
           data-text="David Velasco"
           style={{ fontFamily: "'Orbitron', sans-serif" }}
         >

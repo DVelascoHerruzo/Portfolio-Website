@@ -83,3 +83,44 @@ body {
   color: #00f0ff;
   text-transform: uppercase;
 }
+
+/* ─── Auto-play Glitch (fires periodically without hover) ────── */
+@keyframes glitch-auto-1 {
+  0%,89.5%,93.5%,100% { clip-path:inset(0 0 100% 0); opacity:0; transform:none; }
+  90%   { clip-path:inset(35% 0 48% 0); opacity:1; transform:translate(-4px,0); }
+  90.5% { clip-path:inset(8%  0 82% 0); opacity:1; transform:translate( 4px,0); }
+  91%   { clip-path:inset(62% 0 18% 0); opacity:1; transform:translate(-3px,0); }
+  91.5% { clip-path:inset(0 0 100% 0);  opacity:0; }
+  92%   { clip-path:inset(20% 0 60% 0); opacity:0.7; transform:translate(3px,0); }
+  93%   { clip-path:inset(0 0 100% 0);  opacity:0; transform:none; }
+}
+@keyframes glitch-auto-2 {
+  0%,90%,94%,100%   { clip-path:inset(0 0 100% 0); opacity:0; transform:none; }
+  90.5% { clip-path:inset(55% 0 25% 0); opacity:1; transform:translate( 5px,0); }
+  91%   { clip-path:inset(20% 0 60% 0); opacity:1; transform:translate(-4px,0); }
+  91.5% { clip-path:inset(75% 0 5%  0); opacity:1; transform:translate( 2px,0); }
+  92%   { clip-path:inset(0 0 100% 0);  opacity:0; }
+  92.5% { clip-path:inset(40% 0 42% 0); opacity:0.5; transform:translate(-3px,0); }
+  93.5% { clip-path:inset(0 0 100% 0);  opacity:0; transform:none; }
+}
+.glitch-auto::before { color:#00f0ff; animation:glitch-auto-1 6s linear infinite; }
+.glitch-auto::after  { color:#ff003c; animation:glitch-auto-2 6s linear infinite; }
+.glitch-auto:hover::before { animation:glitch-1 0.4s steps(2) infinite; color:#00f0ff; }
+.glitch-auto:hover::after  { animation:glitch-2 0.4s steps(2) infinite; color:#ff003c; }
+
+/* ─── Hero background scan-line sweep ───────────────────────── */
+@keyframes scan-down {
+  0%   { transform:translateY(-4vh); opacity:0; }
+  3%   { opacity:1; }
+  97%  { opacity:0.7; }
+  100% { transform:translateY(103vh); opacity:0; }
+}
+
+/* ─── Hero RGB flash overlay ─────────────────────────────────── */
+@keyframes rgb-flash {
+  0%,90%,100%  { opacity:0; }
+  90.3%        { opacity:1; }
+  90.8%        { opacity:0; }
+  91.5%        { opacity:0.5; }
+  92%          { opacity:0; }
+}
