@@ -138,11 +138,11 @@ export default function ShaderWork() {
                 className="text-2xl sm:text-3xl font-bold text-cp-yellow neon-yellow mb-3"
                 style={{ fontFamily: "'Rajdhani', sans-serif" }}
               >
-                {featuredProject.title}
+                {t.shaderWork.featuredTitle}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-4">{featuredProject.description}</p>
-              {featuredProject.longDescription && (
-                <p className="text-cp-muted text-xs leading-relaxed mb-5">{featuredProject.longDescription}</p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">{t.shaderWork.featuredDescription}</p>
+              {t.shaderWork.featuredLongDescription && (
+                <p className="text-cp-muted text-xs leading-relaxed mb-5">{t.shaderWork.featuredLongDescription}</p>
               )}
 
               <div className="flex flex-wrap gap-1.5 mb-6">

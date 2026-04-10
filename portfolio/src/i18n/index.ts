@@ -29,6 +29,9 @@ export interface Translations {
   shaderWork: {
     heading: string;
     featured: string;
+    featuredTitle: string;
+    featuredDescription: string;
+    featuredLongDescription: string;
     demosInclude: string;
     launchPlayground: string;
     reshadeSection: string;
@@ -117,6 +120,9 @@ const en: Translations = {
   shaderWork: {
     heading:          '// SHADER_WORK',
     featured:         'FEATURED PROJECT',
+    featuredTitle:    'Shader Playground',
+    featuredDescription: 'A real-time forward renderer built in C++ and HLSL on DirectX 11 — GPU-tessellated procedural terrain, screen-space heightmap ray tracing for water reflections/refractions, Beer-Lambert water absorption, 3-cascade PCF shadow maps, and a full post-process pipeline including SSGI, god rays, and ACES tonemap.',
+    featuredLongDescription: 'Written from scratch: Win32/DX11 device setup, typed constant-buffer wrappers, hot HLSL shader reload (F5), and an ImGui docking UI with live sliders for every parameter. Terrain generates async on CPU with domain-warped FBM + hydraulic erosion, then tessellates on the GPU via hull/domain shaders with screen-space LOD. Water combines Gerstner wave displacement, GGX specular, Fresnel, Beer-Lambert depth absorption, and a dedicated reflection/refraction pre-render pass.',
     demosInclude:     'DEMOS INCLUDE',
     launchPlayground: 'LAUNCH PLAYGROUND',
     reshadeSection:   'RESHADE PROJECTS',
@@ -165,7 +171,7 @@ const en: Translations = {
   },
   lore: {
     heading:  '// JACK_IN — WHY.CDPR',
-    subtitle: "Beyond the technical — the worlds and stories that shaped how I think.",
+    subtitle: "Beyond the technical — the worlds, systems, and stories that trained how I think about design.",
     quote1:   "I've spent years inside worlds other people built.",
     quote2:   "Now I want to help build them.",
     tabletopLabel:   'TABLETOP ARCHITECT',
@@ -186,13 +192,13 @@ const en: Translations = {
     cyberpunkHighlights: [
       'All Cyberpunk TTRPG editions: Cyberpunk 2020, V3, RED, and the original Corebook',
       'Deep lore: Corporations, Edgerunners, NET architecture, the Blackhand timeline',
-      'The Cosmere (Brandon Sanderson) — read across the full shared universe, playing the Cosmere TTRPG',
+      'The Cosmere (Brandon Sanderson) — read the full shared universe; took his free university creative writing course — Promises/Progress/Payoff, the MICE quotient, and why constraints make magic (and game) systems more compelling than raw power; playing the Cosmere TTRPG',
       "Studied how different creators translate worlds across media — from Pondsmith's tabletop to CDPR's adaptation",
       'Run campaigns mixing source material: custom CP2077 conversions and Cosmere encounters at the table',
     ],
-    cyberpunkFooterPre:       'Deep familiarity with the stories behind great games',
-    cyberpunkFooterHighlight: 'shapes how you think about what makes them work',
-    cyberpunkFooterPost:      '. That perspective carries into everything I build.',
+    cyberpunkFooterPre:       'Understanding what makes worlds work — the promises they make, the constraints they impose —',
+    cyberpunkFooterHighlight: 'is the closest thing to a systems design masterclass',
+    cyberpunkFooterPost:      '. That perspective carries into every pipeline and mechanic I build.',
     editionsLabel: 'TTRPGs PLAYED:',
     notesCaption1: 'Notes on long running 3 year campaign',
     notesCaption2: 'Notes for a The Witcher Oneshot',
@@ -238,6 +244,9 @@ const es: Translations = {
   shaderWork: {
     heading:          '// TRABAJO_DE_SHADERS',
     featured:         'PROYECTO DESTACADO',
+    featuredTitle:    'Shader Playground',
+    featuredDescription: 'Un renderizador forward en tiempo real construido en C++ y HLSL sobre DirectX 11 — terreno procedural tesalado con GPU, ray tracing de heightmap en espacio de pantalla para reflexiones/refracciones de agua, absorción Beer-Lambert, mapas de sombras PCF de 3 cascadas y un pipeline completo de post-proceso con SSGI, rayos de luz y tonemap ACES.',
+    featuredLongDescription: 'Escrito desde cero: configuración Win32/DX11, wrappers tipados para constant buffers, recarga en caliente de shaders HLSL (F5) y una UI de docking ImGui con sliders en vivo para cada parámetro. El terreno se genera asíncronamente en CPU con FBM domain-warped + erosión hidráulica, y luego se tesaló en la GPU mediante hull/domain shaders con LOD en espacio de pantalla. El agua combina desplazamiento de olas Gerstner, especular GGX, Fresnel, absorción de profundidad Beer-Lambert y un pase dedicado de pre-render para reflexión/refracción.',
     demosInclude:     'DEMOS INCLUIDAS',
     launchPlayground: 'ABRIR PLAYGROUND',
     reshadeSection:   'PROYECTOS RESHADE',
@@ -286,7 +295,7 @@ const es: Translations = {
   },
   lore: {
     heading:  '// CONECTAR — POR_QUÉ.CDPR',
-    subtitle: 'Más allá de lo técnico — los mundos e historias que moldearon mi forma de pensar.',
+    subtitle: 'Más allá de lo técnico — los mundos, sistemas e historias que entrenaron cómo pienso sobre el diseño.',
     quote1:   'He pasado años dentro de mundos que otros construyeron.',
     quote2:   'Ahora quiero ayudar a construirlos.',
     tabletopLabel:   'ARQUITECTO DE MESA',
@@ -307,13 +316,13 @@ const es: Translations = {
     cyberpunkHighlights: [
       'Todas las ediciones del TTRPG Cyberpunk: Cyberpunk 2020, V3, RED y el Corebook original',
       'Lore profundo: Corporaciones, Edgerunners, arquitectura NET, la línea temporal de Blackhand',
-      'El Cosmere (Brandon Sanderson) — leída la saga completa, jugando al TTRPG del Cosmere',
+      'El Cosmere (Brandon Sanderson) — leída la saga completa; completé su curso universitario gratuito de escritura creativa — Promesas/Progreso/Recompensa, el cociente MICE y por qué las restricciones hacen los sistemas de magia (y de juego) más interesantes que el poder bruto; jugando al TTRPG del Cosmere',
       'Estudiado cómo distintos creadores trasladan mundos a nuevos medios — de la mesa de Pondsmith a la adaptación de CDPR',
       'Dirigí campañas mezclando material fuente: conversiones de CP2077 y encuentros del Cosmere',
     ],
-    cyberpunkFooterPre:       'La familiaridad profunda con las historias detrás de los grandes juegos',
-    cyberpunkFooterHighlight: 'moldea cómo piensas sobre lo que los hace funcionar',
-    cyberpunkFooterPost:      '. Esa perspectiva la llevo a todo lo que construyo.',
+    cyberpunkFooterPre:       'Entender qué hace funcionar a los mundos — las promesas que hacen y las restricciones que imponen —',
+    cyberpunkFooterHighlight: 'es el equivalente más cercano a una clase magistral de diseño de sistemas',
+    cyberpunkFooterPost:      '. Esa perspectiva la llevo a cada pipeline y mecánica que construyo.',
     editionsLabel: 'TTRPGs JUGADOS:',
     notesCaption1: 'Notas de una campaña de 3 años',
     notesCaption2: 'Notas para un one-shot de The Witcher',
@@ -359,6 +368,9 @@ const pl: Translations = {
   shaderWork: {
     heading:          '// PRACA_Z_SHADERAMI',
     featured:         'WYRÓŻNIONY PROJEKT',
+    featuredTitle:    'Shader Playground',
+    featuredDescription: 'Renderowanie forward w czasie rzeczywistym napisane w C++ i HLSL na DirectX 11 — proceduralny teren teselowany przez GPU, ray tracing heightmapy w przestrzeni ekranu dla odbić/refrakcji wody, absorpcja Beer-Lamberta, mapy cieni PCF 3 kaskad i pełny potok post-processingu z SSGI, bożymi promieniami i tonemappingiem ACES.',
+    featuredLongDescription: 'Napisane od podstaw: konfiguracja Win32/DX11, typowane wrappery constant bufferów, hot-reload shaderów HLSL (F5) i UI dockingowe ImGui z żywymi suwakami dla każdego parametru. Teren generuje się asynchronicznie na CPU z FBM warped domain + erozją hydrauliczną, następnie jest teselowany na GPU przez shadery hull/domain z LOD w przestrzeni ekranu. Woda łączy przemieszczenie fal Gerstnera, GGX specular, Fresnel, absorpcję głębokości Beer-Lamberta i dedykowany pre-render dla odbicia/refrakcji.',
     demosInclude:     'DEMO ZAWIERAJĄ',
     launchPlayground: 'URUCHOM PLAYGROUND',
     reshadeSection:   'PROJEKTY RESHADE',
@@ -407,7 +419,7 @@ const pl: Translations = {
   },
   lore: {
     heading:  '// POŁĄCZ_SIĘ — DLACZEGO.CDPR',
-    subtitle: 'Poza techniką — światy i opowieści, które ukształtowały mój sposób myślenia.',
+    subtitle: 'Poza techniką — światy, systemy i opowieści, które ukształtowały mój sposób myślenia o projektowaniu.',
     quote1:   'Spędziłem lata wewnątrz światów, które budowali inni.',
     quote2:   'Teraz chcę pomóc je tworzyć.',
     tabletopLabel:   'ARCHITEKT STOŁOWY',
@@ -428,13 +440,13 @@ const pl: Translations = {
     cyberpunkHighlights: [
       'Wszystkie edycje TTRPG Cyberpunk: Cyberpunk 2020, V3, RED i oryginalny Corebook',
       'Głęboka wiedza: Korporacje, Edgerunnerzy, architektura NET, oś czasu Blackhanda',
-      'Kosmere (Brandon Sanderson) — przeczytana cała saga, granie w TTRPG Kosmere',
+      'Kosmere (Brandon Sanderson) — przeczytana cała saga; ukończyłem jego bezpłatny akademicki kurs creative writing — Obietnice/Postęp/Nagroda, wykres MICE i dlaczego ograniczenia sprawiają, że systemy magii (i gier) są bardziej przekonujące niż czysta moc; granie w TTRPG Kosmere',
       'Studiowanie, jak różni twórcy przenoszą światy na nowe media — od stolika Pondsmitha do adaptacji CDPR',
       'Prowadziłem kampanie mieszające materiał źródłowy: konwersje CP2077 i encountery z Kosmere',
     ],
-    cyberpunkFooterPre:       'Głęboka znajomość historii za wielkimi grami',
-    cyberpunkFooterHighlight: 'kształtuje sposób, w jaki myślisz o tym, co je tworzy',
-    cyberpunkFooterPost:      '. Tę perspektywę wnoszę do każdego projektu, nad którym pracuję.',
+    cyberpunkFooterPre:       'Rozumienie tego, co sprawia, że światy działają — obietnice, jakie składają, i ograniczenia, jakie narzucają —',
+    cyberpunkFooterHighlight: 'to najbliższy odpowiednik kursu mistrzowskiego z projektowania systemów',
+    cyberpunkFooterPost:      '. Tę perspektywę wnoszę do każdego potoku i mechaniki, nad którą pracuję.',
     editionsLabel: 'TTRPG:',
     notesCaption1: 'Notatki z 3-letniej kampanii',
     notesCaption2: 'Notatki do one-shotu Wiedźmin',
