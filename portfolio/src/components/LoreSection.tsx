@@ -145,7 +145,7 @@ export default function LoreSection() {
         className="mt-8 flex flex-wrap gap-2 items-center"
       >
         <span className="section-label mr-2">{t.lore.editionsLabel}</span>
-        {['Cyberpunk 2020', 'Cyberpunk V3.0', 'Cyberpunk RED', 'CP2077 (videogame)', 'Edgerunners (lore)'].map(ed => (
+        {['Cyberpunk 2020', 'Cyberpunk RED', 'D&D 5e', 'Cosmere TTRPG', 'Call of Cthulhu', 'Daggerheart'].map(ed => (
           <span key={ed} className="px-2.5 py-1 text-xs border border-cp-yellow/40 text-cp-yellow bg-cp-yellow/5 font-mono">
             {ed}
           </span>
