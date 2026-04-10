@@ -115,7 +115,7 @@ const en: Translations = {
     apis:      'APIs & ENGINES',
     languages: 'LANGUAGES & TOOLS',
     ai:        'AI / MACHINE LEARNING',
-    web:       'WEB DEVELOPMENT',
+    web:       'WEB & BACKEND',
   },
   shaderWork: {
     heading:          '// SHADER_WORK',
@@ -239,7 +239,7 @@ const es: Translations = {
     apis:      'APIs & MOTORES',
     languages: 'LENGUAJES & HERRAMIENTAS',
     ai:        'IA / MACHINE LEARNING',
-    web:       'DESARROLLO WEB',
+    web:       'WEB & BACKEND',
   },
   shaderWork: {
     heading:          '// TRABAJO_DE_SHADERS',
@@ -363,7 +363,7 @@ const pl: Translations = {
     apis:      'API & SILNIKI',
     languages: 'JĘZYKI & NARZĘDZIA',
     ai:        'AI / UCZENIE MASZYNOWE',
-    web:       'TWORZENIE STRON',
+    web:       'WEB & BACKEND',
   },
   shaderWork: {
     heading:          '// PRACA_Z_SHADERAMI',

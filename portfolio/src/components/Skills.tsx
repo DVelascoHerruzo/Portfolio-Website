@@ -10,11 +10,18 @@ const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-
     color: 'cp-cyan' as const,
     skills: [
       'React',
+      'Node.js',
       'HTML5',
       'CSS3 / Tailwind',
       'TypeScript',
       'Vite',
       'REST APIs',
+      'FastAPI',
+      'Docker / Docker Compose',
+      'SQL (PostgreSQL / MySQL)',
+      'NoSQL / Cosmos DB',
+      'Azure SWA + Functions',
+      'Java / JVM',
     ],
   },
   {
