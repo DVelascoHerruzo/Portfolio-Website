@@ -6,6 +6,44 @@ type SkillGroupKey = keyof Pick<Translations['skills'], 'rendering' | 'shading' 
 
 const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-red'; skills: readonly string[] }[] = [
   {
+    tKey: 'web' as const,
+    color: 'cp-cyan' as const,
+    skills: [
+      'React',
+      'HTML5',
+      'CSS3 / Tailwind',
+      'TypeScript',
+      'Vite',
+      'REST APIs',
+    ],
+  },
+  {
+    tKey: 'languages' as const,
+    color: 'cp-yellow' as const,
+    skills: [
+      'C++',
+      'Python',
+      'TypeScript',
+      'JavaScript',
+      'RenderDoc',
+      'Git',
+      'Linux / WSL',
+    ],
+  },
+  {
+    tKey: 'ai' as const,
+    color: 'cp-red' as const,
+    skills: [
+      'Machine Learning',
+      'Neural Networks',
+      'NLP',
+      'PyTorch',
+      'NumPy / pandas',
+      'scikit-learn',
+      'Data Analysis',
+    ],
+  },
+  {
     tKey: 'rendering' as const,
     color: 'cp-cyan' as const,
     skills: [
@@ -39,44 +77,6 @@ const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-
       'Vulkan (familiarity)',
       'WebGL',
       'Unreal Engine 5',
-    ],
-  },
-  {
-    tKey: 'languages' as const,
-    color: 'cp-yellow' as const,
-    skills: [
-      'C++',
-      'Python',
-      'TypeScript',
-      'JavaScript',
-      'RenderDoc',
-      'Git',
-      'Linux / WSL',
-    ],
-  },
-  {
-    tKey: 'web' as const,
-    color: 'cp-cyan' as const,
-    skills: [
-      'React',
-      'HTML5',
-      'CSS3 / Tailwind',
-      'TypeScript',
-      'Vite',
-      'REST APIs',
-    ],
-  },
-  {
-    tKey: 'ai' as const,
-    color: 'cp-red' as const,
-    skills: [
-      'Machine Learning',
-      'Neural Networks',
-      'NLP',
-      'PyTorch',
-      'NumPy / pandas',
-      'scikit-learn',
-      'Data Analysis',
     ],
   },
 ] as const;
