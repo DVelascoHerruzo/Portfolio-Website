@@ -25,6 +25,7 @@ export interface Translations {
     languages: string;
     ai: string;
     web: string;
+    tools: string;
   };
   shaderWork: {
     heading: string;
@@ -116,6 +117,7 @@ const en: Translations = {
     languages: 'LANGUAGES & TOOLS',
     ai:        'AI / MACHINE LEARNING',
     web:       'WEB & BACKEND',
+    tools:     'TOOLS & INFRA',
   },
   shaderWork: {
     heading:          '// SHADER_WORK',
@@ -240,6 +242,7 @@ const es: Translations = {
     languages: 'LENGUAJES & HERRAMIENTAS',
     ai:        'IA / MACHINE LEARNING',
     web:       'WEB & BACKEND',
+    tools:     'TOOLS & INFRA',
   },
   shaderWork: {
     heading:          '// TRABAJO_DE_SHADERS',
@@ -364,6 +367,7 @@ const pl: Translations = {
     languages: 'JĘZYKI & NARZĘDZIA',
     ai:        'AI / UCZENIE MASZYNOWE',
     web:       'WEB & BACKEND',
+    tools:     'TOOLS & INFRA',
   },
   shaderWork: {
     heading:          '// PRACA_Z_SHADERAMI',

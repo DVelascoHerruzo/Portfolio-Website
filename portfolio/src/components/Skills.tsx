@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import type { Translations } from '../i18n';
 
-type SkillGroupKey = keyof Pick<Translations['skills'], 'rendering' | 'shading' | 'apis' | 'languages' | 'web' | 'ai'>;
+type SkillGroupKey = keyof Pick<Translations['skills'], 'rendering' | 'shading' | 'apis' | 'languages' | 'web' | 'ai' | 'tools'>;
 
 const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-red'; skills: readonly string[] }[] = [
   {
@@ -15,13 +15,19 @@ const SKILL_GROUPS: { tKey: SkillGroupKey; color: 'cp-cyan' | 'cp-yellow' | 'cp-
       'CSS3 / Tailwind',
       'TypeScript',
       'Vite',
-      'REST APIs',
       'FastAPI',
+      'Java / JVM',
+    ],
+  },
+  {
+    tKey: 'tools' as const,
+    color: 'cp-yellow' as const,
+    skills: [
+      'REST APIs',
       'Docker / Docker Compose',
       'SQL (PostgreSQL / MySQL)',
       'NoSQL / Cosmos DB',
       'Azure SWA + Functions',
-      'Java / JVM',
     ],
   },
   {
