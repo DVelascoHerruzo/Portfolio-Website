@@ -151,6 +151,42 @@ export default function LoreSection() {
           </span>
         ))}
       </motion.div>
+
+      {/* Obsidian notes gallery */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.55 }}
+        className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4"
+      >
+        <div className="border border-cp-border bg-cp-surface clip-corner overflow-hidden group">
+          <div className="h-56 overflow-hidden">
+            <img
+              src="images/Running%20campaing%20notes.png"
+              alt={t.lore.notesCaption1}
+              className="w-full h-full object-cover object-center opacity-75 group-hover:opacity-90 transition-opacity duration-500"
+            />
+          </div>
+          <div className="px-4 py-2.5 border-t border-cp-border flex items-center gap-2">
+            <span className="text-cp-cyan font-mono shrink-0 text-xs">▸</span>
+            <p className="text-cp-muted text-xs font-mono">{t.lore.notesCaption1}</p>
+          </div>
+        </div>
+        <div className="border border-cp-yellow/30 bg-cp-surface clip-corner overflow-hidden group">
+          <div className="h-56 overflow-hidden">
+            <img
+              src="images/The%20Witcher%20Oneshot.png"
+              alt={t.lore.notesCaption2}
+              className="w-full h-full object-cover object-center opacity-75 group-hover:opacity-90 transition-opacity duration-500"
+            />
+          </div>
+          <div className="px-4 py-2.5 border-t border-cp-yellow/20 flex items-center gap-2">
+            <span className="font-mono shrink-0 text-xs" style={{ color: '#fcee09' }}>▸</span>
+            <p className="text-cp-muted text-xs font-mono">{t.lore.notesCaption2}</p>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

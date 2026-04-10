@@ -11,7 +11,7 @@ export default function Hero() {
   // Parallax transforms
   const contentY  = useTransform(scrollYProgress, [0, 1], ['0%', '-22%']);
   const contentOp = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const gridY     = useTransform(scrollYProgress, [0, 1], ['0%', '-40%']);
+  const gridY     = useTransform(scrollYProgress, [0, 1], ['0%', '4%']);
 
   const scrollToShaders = () => {
     document.getElementById('shaders')?.scrollIntoView({ behavior: 'smooth' });

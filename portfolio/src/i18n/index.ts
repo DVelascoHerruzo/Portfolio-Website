@@ -73,6 +73,8 @@ export interface Translations {
     cyberpunkFooterHighlight: string;
     cyberpunkFooterPost: string;
     editionsLabel: string;
+    notesCaption1: string;
+    notesCaption2: string;
   };
   contact: {
     heading: string;
@@ -174,6 +176,7 @@ const en: Translations = {
       'Adapted CD Projekt RED videogame systems (economy, cyberware, reputation) into tabletop campaigns',
       'Strong understanding of game balance, player agency, and narrative-mechanical feedback loops',
       'Built a full-stack online platform for Theater of the Mind D&D — real-time session tools, player dashboards, and DM tooling — in React + TypeScript',
+      'Ran a custom Witcher TTRPG oneshot — adapted combat mechanics and monster encounters from the official Witcher TTRPG sourcebook into a full one-session adventure for the group',
     ],
     tabletopFooterPre:       'Years of DMing translate directly to',
     tabletopFooterHighlight: 'systems design thinking',
@@ -183,6 +186,7 @@ const en: Translations = {
     cyberpunkHighlights: [
       'All Cyberpunk TTRPG editions: Cyberpunk 2020, V3, RED, and the original Corebook',
       'Deep lore: Corporations, Edgerunners, NET architecture, the Blackhand timeline',
+      "The Witcher — read the full Sapkowski saga; all three CDPR games through every DLC; the journey from Polish literary fantasy to AAA is one of the most compelling world adaptations ever made",
       'The Cosmere (Brandon Sanderson) — read across the full shared universe, playing the Cosmere TTRPG',
       "Studied how different creators translate worlds across media — from Pondsmith's tabletop to CDPR's adaptation",
       'Run campaigns mixing source material: custom CP2077 conversions and Cosmere encounters at the table',
@@ -191,6 +195,8 @@ const en: Translations = {
     cyberpunkFooterHighlight: 'shapes how you think about what makes them work',
     cyberpunkFooterPost:      '. That perspective carries into everything I build.',
     editionsLabel: 'CYBERPUNK EDITIONS PLAYED:',
+    notesCaption1: 'Notes on long running 3 year campaign',
+    notesCaption2: 'Notes for a The Witcher Oneshot',
   },
   contact: {
     heading:         '// OPEN_CHANNEL',
@@ -292,6 +298,7 @@ const es: Translations = {
       'Adapté los sistemas de los videojuegos de CD Projekt RED (economía, ciberware, reputación) a campañas de rol',
       'Sólida comprensión del equilibrio de juego, la agencia del jugador y los bucles narrativo-mecánicos',
       'Desarrollé una plataforma web completa para D&D Teatro de la Mente — herramientas en tiempo real, paneles de jugadores y utilidades para el DM — en React + TypeScript',
+      'Dirigí un one-shot del TTRPG de The Witcher — adapté mecánicas de combate y encuentros con monstruos del manual oficial en una aventura completa de una sesión para el grupo',
     ],
     tabletopFooterPre:       'Años de DM se traducen directamente en',
     tabletopFooterHighlight: 'pensamiento de diseño de sistemas',
@@ -301,6 +308,7 @@ const es: Translations = {
     cyberpunkHighlights: [
       'Todas las ediciones del TTRPG Cyberpunk: Cyberpunk 2020, V3, RED y el Corebook original',
       'Lore profundo: Corporaciones, Edgerunners, arquitectura NET, la línea temporal de Blackhand',
+      'The Witcher — leída la saga completa de Sapkowski; los tres juegos de CDPR a fondo; el viaje de la fantasía literaria polaca al AAA es una de las adaptaciones de universo más notables jamás realizadas',
       'El Cosmere (Brandon Sanderson) — leída la saga completa, jugando al TTRPG del Cosmere',
       'Estudiado cómo distintos creadores trasladan mundos a nuevos medios — de la mesa de Pondsmith a la adaptación de CDPR',
       'Dirigí campañas mezclando material fuente: conversiones de CP2077 y encuentros del Cosmere',
@@ -309,6 +317,8 @@ const es: Translations = {
     cyberpunkFooterHighlight: 'moldea cómo piensas sobre lo que los hace funcionar',
     cyberpunkFooterPost:      '. Esa perspectiva la llevo a todo lo que construyo.',
     editionsLabel: 'EDICIONES DE CYBERPUNK JUGADAS:',
+    notesCaption1: 'Notas de una campaña de 3 años',
+    notesCaption2: 'Notas para un one-shot de The Witcher',
   },
   contact: {
     heading:         '// CANAL_ABIERTO',
@@ -410,6 +420,7 @@ const pl: Translations = {
       'Zaadaptowałem systemy gier wideo CD Projekt RED (ekonomia, cyberware, reputacja) do kampanii RPG',
       'Dobre zrozumienie balansu gry, sprawczości gracza i pętli narracyjno-mechanicznych',
       'Zbudowałem pełnostackową platformę online dla D&D Theater of the Mind — narzędzia sesji, pulpity gracza i narzędzia Mistrza Gry — w React + TypeScript',
+      'Poprowadziłem własny oneshot TTRPG Wiedźmin — zaadaptowałem mechaniki walki i starcia z potworami z oficjalnego podręcznika Wiedźmin do pełnej przygody na jedną sesję dla grupy',
     ],
     tabletopFooterPre:       'Lata prowadzenia gier przekładają się bezpośrednio w',
     tabletopFooterHighlight: 'myślenie projektowe systemów',
@@ -419,6 +430,7 @@ const pl: Translations = {
     cyberpunkHighlights: [
       'Wszystkie edycje TTRPG Cyberpunk: Cyberpunk 2020, V3, RED i oryginalny Corebook',
       'Głęboka wiedza: Korporacje, Edgerunnerzy, architektura NET, oś czasu Blackhanda',
+      'Wiedźmin — przeczytana cała saga Sapkowskiego; wszystkie trzy gry CDPR razem z DLC; droga od polskiej fantastyki literackiej do AAA to jedna z najbardziej przekonujących adaptacji świata, jakie kiedykolwiek powstały',
       'Kosmere (Brandon Sanderson) — przeczytana cała saga, granie w TTRPG Kosmere',
       'Studiowanie, jak różni twórcy przenoszą światy na nowe media — od stolika Pondsmitha do adaptacji CDPR',
       'Prowadziłem kampanie mieszające materiał źródłowy: konwersje CP2077 i encountery z Kosmere',
@@ -427,6 +439,8 @@ const pl: Translations = {
     cyberpunkFooterHighlight: 'kształtuje sposób, w jaki myślisz o tym, co je tworzy',
     cyberpunkFooterPost:      '. Tę perspektywę wnoszę do każdego projektu, nad którym pracuję.',
     editionsLabel: 'EDYCJE CYBERPUNKA:',
+    notesCaption1: 'Notatki z 3-letniej kampanii',
+    notesCaption2: 'Notatki do one-shotu Wiedźmin',
   },
   contact: {
     heading:         '// OTWARTY_KANAŁ',

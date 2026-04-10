@@ -57,7 +57,6 @@ function PortfolioContent() {
             transition={{ duration: 0.35, delay: 0.75 }}
             className="section-label text-cp-yellow/40 text-[10px] mt-2"
           >
-            {'>'} SCANNING CANDIDATE PROFILE... OK
           </motion.p>
         </motion.div>
 
