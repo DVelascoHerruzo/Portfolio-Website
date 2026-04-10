@@ -66,13 +66,13 @@ function PortfolioContent() {
           <hr className="border-none border-t border-cp-border" />
         </div>
 
-        <ShaderWork />
+        <LLMSection />
 
         <div className="max-w-6xl mx-auto px-6">
           <hr className="border-none border-t border-cp-border" />
         </div>
 
-        <LLMSection />
+        <ShaderWork />
 
         <div className="max-w-6xl mx-auto px-6">
           <hr className="border-none border-t border-cp-border" />

@@ -94,7 +94,7 @@ export default function ShaderWork() {
         transition={{ duration: 0.5 }}
         className="mb-14"
       >
-        <p className="section-label mb-2">02 /</p>
+        <p className="section-label mb-2">03 /</p>
         <h2
           className="text-3xl sm:text-4xl font-bold text-white tracking-wider"
           style={{ fontFamily: "'Rajdhani', sans-serif" }}

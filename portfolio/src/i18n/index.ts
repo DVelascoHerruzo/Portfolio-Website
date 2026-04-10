@@ -102,10 +102,10 @@ const en: Translations = {
   },
   hero: {
     pretitle:    'TARGETING: CD PROJEKT RED — SUMMER INTERNSHIP 2026',
-    subtitle:    'CS & AI STUDENT — GRAPHICS & RENDERING',
+    subtitle:    'CS & AI STUDENT — BACKEND & GRAPHICS',
     tagline1:    '3rd year Computer Science & AI at IE University.',
-    tagline2:    'Obsessed with real-time rendering — shader writer, ReShade author, aspiring graphics engineer.',
-    viewShaders: 'VIEW SHADER WORK',
+    tagline2:    'Backend systems, AI pipelines, and real-time rendering — building things end-to-end.',
+    viewShaders: 'VIEW MY WORK',
     downloadCv:  'DOWNLOAD CV',
   },
   skills: {
@@ -208,7 +208,7 @@ const en: Translations = {
     subtitle1:       'Interested in my work, or have a question about my application?',
     subtitle2:       'Reach out through any channel below.',
     footerBuilt:     'Built with React + Vite + TailwindCSS v4 ·',
-    footerTargeting: 'Targeting CD Projekt RED — Summer Internship · Graphics & Rendering',
+    footerTargeting: 'Targeting CD Projekt RED — Summer Internship · Backend & Graphics',
   },
 };
 
@@ -226,10 +226,10 @@ const es: Translations = {
   },
   hero: {
     pretitle:    'OBJETIVO: CD PROJEKT RED — PRÁCTICAS DE VERANO 2026',
-    subtitle:    'ESTUDIANTE CS & IA — GRÁFICOS & RENDERIZADO',
+    subtitle:    'ESTUDIANTE CS & IA — BACKEND & GRÁFICOS',
     tagline1:    '3er año de Informática e Inteligencia Artificial en IE University.',
-    tagline2:    'Apasionado del renderizado en tiempo real — programmador de shaders, autor de ReShade, aspirante a ingeniero gráfico.',
-    viewShaders: 'VER TRABAJO DE SHADERS',
+    tagline2:    'Sistemas backend, pipelines de IA y renderizado en tiempo real — construyendo proyectos de principio a fin.',
+    viewShaders: 'VER MI TRABAJO',
     downloadCv:  'DESCARGAR CV',
   },
   skills: {
@@ -332,7 +332,7 @@ const es: Translations = {
     subtitle1:       '¿Interesado en mi trabajo o tienes alguna pregunta sobre mi candidatura?',
     subtitle2:       'Contáctame a través de cualquier canal.',
     footerBuilt:     'Hecho con React + Vite + TailwindCSS v4 ·',
-    footerTargeting: 'Aplicando a CD Projekt RED — Prácticas de Verano · Gráficos & Renderizado',
+    footerTargeting: 'Aplicando a CD Projekt RED — Prácticas de Verano · Backend & Gráficos',
   },
 };
 
@@ -350,10 +350,10 @@ const pl: Translations = {
   },
   hero: {
     pretitle:    'CEL: CD PROJEKT RED — STAŻ LETNI 2026',
-    subtitle:    'STUDENT CS & AI — GRAFIKA & RENDEROWANIE',
+    subtitle:    'STUDENT CS & AI — BACKEND & GRAFIKA',
     tagline1:    '3. rok informatyki i sztucznej inteligencji na IE University.',
-    tagline2:    'Zafascynowany renderowaniem w czasie rzeczywistym — autor shaderów, twórca ReShade, przyszły inżynier grafiki.',
-    viewShaders: 'ZOBACZ PRACE Z SHADERAMI',
+    tagline2:    'Systemy backendowe, potoki AI i renderowanie w czasie rzeczywistym — budowanie projektów od A do Z.',
+    viewShaders: 'ZOBACZ MOJE PRACE',
     downloadCv:  'POBIERZ CV',
   },
   skills: {
@@ -456,7 +456,7 @@ const pl: Translations = {
     subtitle1:       'Zainteresowany moją pracą lub masz pytanie dotyczące mojej aplikacji?',
     subtitle2:       'Skontaktuj się przez dowolny kanał poniżej.',
     footerBuilt:     'Zbudowane z React + Vite + TailwindCSS v4 ·',
-    footerTargeting: 'Aplikacja do CD Projekt RED — Staż Letni · Grafika & Renderowanie',
+    footerTargeting: 'Aplikacja do CD Projekt RED — Staż Letni · Backend & Grafika',
   },
 };
 
