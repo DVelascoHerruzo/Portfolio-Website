@@ -71,6 +71,7 @@ export const projects: Project[] = [
     tags: ['Python', 'Sentence-Transformers', 'Qdrant', 'MCP', 'FastAPI', 'Docker', 'MLOps', 'NLP'],
     imageUrl: 'images/Git_Query.png',
     githubUrl: 'https://github.com/Seraphim-Systems/git-query',
+    demoUrl: 'https://gitquery.davidhoerz.com/',
     category: 'ml',
   },
 
